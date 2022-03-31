@@ -41,17 +41,6 @@
                            </v-col>
                             <v-col cols="12" sm="6">
                             <v-text-field
-                            label="Birthday date"
-                            outlined
-                            dense
-                            color="blue"
-                            autocomplete="false"
-                           class="mt-4"
-                             input type="date" id="birthday" name="birthday"
-                          />
-                           </v-col>
-                            <v-col cols="12" sm="6">
-                            <v-text-field
                             label="password"
                             outlined
                             dense
@@ -61,37 +50,18 @@
                                input type="password" id="pass" name="password"
            minlength="8" required
                           />
-                           </v-col>
-                            <v-col cols="12" sm="6">
-                            <v-text-field
-                            label="civility"
-                            outlined
-                            dense
-                            color="blue"
-                            autocomplete="false"
-                           class="mt-4"             />
-                           </v-col>
-                            <v-col cols="12" sm="6">
-                            <v-text-field
-                            label="role"
-                            outlined
-                            dense
-                            color="blue"
-                            autocomplete="false"
-                           class="mt-4"
-                          />
-                           </v-col>
-                             <v-col cols="12" sm="6">
-                            <v-text-field
-                            label="photo"
-                            outlined
-                            dense
-                            color="blue"
-                            autocomplete="false"
-                           class="mt-4"
-                          input type="file" accept=".gif,.jpg,.jpeg,.png,.doc,.docx"
-                          />
-                           </v-col>
+                           </v-col >
+                             
+                      <v-col cols="12" sm="6">
+                        <v-select
+                          :items="items"
+                          :menu-props="{ top: true, offsetY: true }"
+                          label="Label"
+                        ></v-select>
+                      </v-col>
+ 
+                          
+                    
                            
                            </v-row>
                         
@@ -120,16 +90,12 @@
   </v-container>
 </template>
 
+
 <script>
-  
   export default {
-   data: () => ({
-    step: 1
-  }),
-  props: {
-    source: String
-  } 
-    
+    data: () => ({
+      items: ['student', 'freelancer', 'undefined', ],
+    }),
   }
 </script>
 <style scoped>

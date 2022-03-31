@@ -26,6 +26,16 @@
                            class="mt-4"
                           />
                            </v-col>
+                             <v-col cols="12" sm="6">
+                            <v-text-field
+                            label="Identifiant-unique"
+                            outlined
+                            dense
+                            color="blue"
+                            autocomplete="false"
+                           class="mt-4"
+                          />
+                           </v-col>
                            <v-col cols="12" sm="6">
                             <v-text-field
                             label="password"
@@ -38,99 +48,20 @@
            minlength="8" required
                           />
                            </v-col>
-                            <v-col cols="12" sm="6">
-                            <v-text-field
-                            label="CEO Name"
-                            outlined
-                            dense
-                            color="blue"
-                            autocomplete="false"
-                           class="mt-4"
-                          />
-                           </v-col>
-                            <v-col cols="12" sm="6">
-                            <v-text-field
-                            label="website"
-                            outlined
-                            dense
-                            color="blue"
-                            autocomplete="false"
-                           class="mt-4"
-                          />
-                           </v-col>
-                            <v-col cols="12" sm="6">
-                            <v-text-field
-                            label="phone Number"
-                            outlined
-                            dense
-                            color="blue"
-                            autocomplete="false"
-                           class="mt-4"             />
-                           </v-col>
-                            <v-col cols="12" sm="6">
-                            <v-text-field
-                            label="adresse"
-                            outlined
-                            dense
-                            color="blue"
-                            autocomplete="false"
-                           class="mt-4"
-                          />
-                           </v-col>
-                             <v-col cols="12" sm="6">
-                            <v-text-field
-                            label="Logo"
-                            outlined
-                            dense
-                            color="blue"
-                            autocomplete="false"
-                           class="mt-4"
-                          input type="file" accept=".gif,.jpg,.jpeg,.png,.doc,.docx"
-                          />
-                           </v-col>
+                    
                                <v-col cols="12" sm="6">
                             <v-text-field
-                            label="Description"
+                            label="Website"
                             outlined
                             dense
                             color="blue"
                             autocomplete="false"
                            class="mt-4"
                           />
-                           </v-col>
-                               <v-col cols="12" sm="6">
-                            <v-text-field
-                            label="Identifiant-unique"
-                            outlined
-                            dense
-                            color="blue"
-                            autocomplete="false"
-                           class="mt-4"
-                          />
-                           </v-col>
-                               <v-col cols="12" sm="6">
-                            <v-text-field
-                            label="Activity"
-                            outlined
-                            dense
-                            color="blue"
-                            autocomplete="false"
-                           class="mt-4"
-                          />
-                           </v-col>
-                           
-                           
+                           </v-col>                      
                            </v-row>
                         
-                        <v-btn color="dark"  dark block tile>Sign up</v-btn> <br>
-                    <div align="center" justify="center" > 
-                          <v-btn  style="background-color: rgb(15, 128, 209) ; width:350px ; border-radius:30px" color="white " ><v-icon>mdi-facebook</v-icon> Facebook</v-btn> <br>
-                          <br>
-                           <v-btn  style="background-color: rgb(248, 64, 80); width:350px ; border-radius:30px" color="white" ><v-icon>mdi-google</v-icon> Google</v-btn> <br>
-                           <br>
-                             <v-btn  style="background-color: black ; width:350px ; border-radius:30px" color="white" ><v-icon>mdi-github</v-icon> Github</v-btn>
-                     
-                      </div>                       
+                        <v-btn color="dark"  dark block tile>Sign up</v-btn> <br>                     
                           </v-col>
                         </v-row>  
                       </v-card-text>

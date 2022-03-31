@@ -5,6 +5,9 @@ import SignUp from "../views/SignUp"
 import CandidateView from "../views/CandidateView"
 import CompanyView from "../views/CompanyView"
 import SignIn from "../views/SignIn"
+import SideBar from"../components/SideBar"
+import DashbordView from '@/views/Admin/DashbordView.vue'
+import GestionUser from '@/views/Admin/GestionUser'
 
 
 
@@ -29,7 +32,24 @@ const routes = [
     path:'/SignIn',
     name:'SignIn',
     component: SignIn
-  }
+  },
+  {
+    path:'/SideBar',
+    name:'SideBar',
+    component: SideBar
+  },
+  {
+    path: '/DashbordView',
+    name: 'DashbordView',
+    component:DashbordView
+    
+  },
+  {
+    path: '/GestionUser',
+    name: 'GestionUser',
+    component:GestionUser
+    
+  },
  
 ]
 
