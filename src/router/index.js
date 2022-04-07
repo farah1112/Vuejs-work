@@ -8,7 +8,8 @@ import SignIn from "../views/SignIn"
 import SideBar from"../components/SideBar"
 import DashbordView from '@/views/Admin/DashbordView.vue'
 import GestionUser from '@/views/Admin/GestionUser'
-
+import PostuleCv from "../views/PostuleCv"
+import HomeView from "../views/HomeView"
 
 
 const routes = [
@@ -48,6 +49,18 @@ const routes = [
     path: '/GestionUser',
     name: 'GestionUser',
     component:GestionUser
+    
+  },
+  {
+    path: '/PostuleCv',
+    name: 'PostuleCv',
+    component:PostuleCv
+    
+  },
+  {
+    path: '/HomeView',
+    name: 'HomeView',
+    component:HomeView
     
   },
  

@@ -1,109 +1,94 @@
 <template>
-  <v-container style="margin-top:-30px">
-      <div class="shape1"></div>
-            
-      <v-row align="center" justify="center" >
-          <v-col cols="12" sm="10">
-            <v-card class="elevation-6 mt-10"  >
-             <v-window v-model="step">
-                <v-window-item :value="1">
-                       
-               <v-row >
-                   
+<navbar-view/>
+    <head>
+	<link rel="stylesheet"
+		href=
+"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<v-container fluid style=" margin-top:50px">
+<div>
+	<center>
+		<form style="max-width:450px;margin:auto">
+			<h2>Join US</h2>
+			<div class="input-icons">
+				<i class="fa fa-user icon">
+			</i>
+				<input class="input-field"
+					type="text"
+					placeholder="FirstName">
+			</div>
+      <div class="input-icons">
+				<i class="fa fa-user icon">
+			</i>
+				<input class="input-field"
+					type="text"
+					placeholder="LastName">
+			</div>
 
-                    <v-col cols="12" md="12">
-                      <v-card-text class="mt-12">
-                        <h1
-                          class="text-center"
-                        >Sign Up for an Account</h1>
-                        <v-row align="center" justify="center">
-                          <v-col cols="12" sm="8">
-                           <v-row>
-                           <v-col cols="12" sm="6">
-                            <v-text-field
-                            label="First Name"
-                            outlined
-                            dense
-                            color="blue"
-                            autocomplete="false"
-                           class="mt-4"
-                          />
-                           </v-col>
-                           <v-col cols="12" sm="6">
-                            <v-text-field
-                            label="Last Name"
-                            outlined
-                            dense
-                            color="blue"
-                            autocomplete="false"
-                           class="mt-4"
-                          />
-                           </v-col>
-                            <v-col cols="12" sm="6">
-                            <v-text-field
-                            label="password"
-                            outlined
-                            dense
-                            color="blue"
-                            autocomplete="false"
-                           class="mt-4"
-                               input type="password" id="pass" name="password"
-           minlength="8" required
-                          />
-                           </v-col >
-                             
-                      <v-col cols="12" sm="6">
-                        <v-select
-                          :items="items"
-                          :menu-props="{ top: true, offsetY: true }"
-                          label="Label"
-                        ></v-select>
-                      </v-col>
- 
-                          
-                    
-                           
-                           </v-row>
-                        
-                        <v-btn color="dark"  dark block tile>Sign up</v-btn> <br>
-                    <div align="center" justify="center" > 
-                          <v-btn  style="background-color: rgb(15, 128, 209) ; width:350px ; border-radius:30px" color="white " ><v-icon>mdi-facebook</v-icon> Facebook</v-btn> <br>
+			<div class="input-icons">
+				<i class="fa fa-key icon">
+			</i>
+				<input class="input-field"
+					type="password"
+					placeholder="Password">
+			</div>
+        <div class="input-icons">
+			<i class="fa fa-user icon">
+      </i>
+				<input class="input-field"
+					type="text"
+					placeholder="Position">
+			</div>
+
+            <v-spacer></v-spacer>
+               <v-hover> <v-btn color="grey" rounded  flat block tile>Sign up</v-btn> </v-hover>
+              <br>
+              <p> Have an account! <router-link  to="/SignIn" style="color:green">SignIn</router-link> </p>
+                <div align="center" justify="center" > 
+                          <v-btn  style=" width:350px ; border-radius:30px" color="white " ><v-icon color="blue">mdi-facebook</v-icon> Facebook</v-btn> <br>
                           <br>
-                           <v-btn  style="background-color: rgb(248, 64, 80); width:350px ; border-radius:30px" color="white" ><v-icon>mdi-google</v-icon> Google</v-btn> <br>
+                           <v-btn  style=" width:350px ; border-radius:30px" color="white" ><v-icon color="red">mdi-google</v-icon> Google</v-btn> <br>
                            <br>
-                             <v-btn  style="background-color: black ; width:350px ; border-radius:30px" color="white" ><v-icon>mdi-github</v-icon> Github</v-btn>
+                             <v-btn  style="width:350px ; border-radius:30px" color="white" ><v-icon color="black">mdi-github</v-icon> Github</v-btn>
                      
-                      </div>                       
-                          </v-col>
-                        </v-row>  
-                      </v-card-text>
-                    </v-col>
-                  </v-row>
-                </v-window-item>
-                <v-window-item :value="2">
-                  
-                </v-window-item>
-              </v-window>
-            </v-card>
-          </v-col>
-      </v-row>
-  </v-container>
+                      </div>  
+		</form>
+	</center>
+    </div>
+    </v-container>
+    <footer-view/>
 </template>
-
-
 <script>
-  export default {
-    data: () => ({
-      items: ['student', 'freelancer', 'undefined', ],
-    }),
-  }
+import NavbarView from '@/components/NavbarView.vue'
+import FooterView from '@/components/FooterView.vue'
+export default {
+  components: { NavbarView, FooterView },
+    name:"SignIn"
+}
 </script>
-<style scoped>
-.v-application .rounded-bl-xl {
-    border-bottom-left-radius: 300px !important;
-}
-.v-application .rounded-br-xl {
-    border-bottom-right-radius: 300px !important;
-}
-
+<style>
+        .input-icons i {
+            position: absolute;
+        }
+        .input-icons {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+          
+        .icon {
+            padding: 10px;
+            color: green;
+            min-width: 50px;
+            text-align: center;
+        }
+          
+        .input-field {
+            width: 100%;
+            padding: 10px;
+            text-align: center;
+        }
+          
+        h2 {
+            color: green;
+        }
 </style>

@@ -1,4 +1,5 @@
 <template>
+<navbar-view/>
     <v-card
     class="mx-auto"
     max-width="600px"
@@ -78,10 +79,17 @@
   <br>
   <p style="text-align:center">Already have an account? <router-link to="/SignIn" style="color:green"> SignIn</router-link></p>
   </v-card>
+  <footer-view/>
 </template>
 
 <script>
+import NavbarView from '@/components/NavbarView.vue'
+import FooterView from '@/components/FooterView.vue'
 export default {
+  components: {
+    NavbarView,
+    FooterView
+    },
     name: 'SignUP',
     data() {
         
