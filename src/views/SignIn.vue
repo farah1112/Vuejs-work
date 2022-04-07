@@ -25,7 +25,7 @@
 					placeholder="Password">
 			</div>
             <v-spacer></v-spacer>
-               <v-hover> <v-btn color="grey" rounded  flat block tile>Sign up</v-btn> </v-hover>
+               <v-hover> <v-btn color="grey" rounded  flat block tile>Sign In</v-btn> </v-hover>
               <br><br>
                 <div align="center" justify="center" > 
                           <v-btn  style=" width:350px ; border-radius:30px" color="white " ><v-icon color="blue">mdi-facebook</v-icon> Facebook</v-btn> <br>
