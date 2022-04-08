@@ -84,7 +84,7 @@
     </v-dialog>
   </v-row>
             </v-row>
-     <v-divider style="padding:1rem"></v-divider>
+     <v-divider></v-divider>
         </v-container>
          <v-container class="text-center">
             <v-row>
