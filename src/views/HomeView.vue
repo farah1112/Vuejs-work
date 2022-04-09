@@ -61,7 +61,6 @@
        <br>
       <br>
     <v-container>
-
       <v-row>
       <v-col cols="12" md="12" lg="12" class="article" v-for="article in articles" :key="article.text">
     <v-avatar
@@ -135,13 +134,32 @@ View all Jobs!
        </div>
       <br>
       <a class="gotopbtn" href="#"> <v-icon>mdi-arrow-up</v-icon> </a>
+      <v-container>
+          <v-row>
+            <v-col cols="12" md="12" lg="12">
+              <v-card
+    class="mx-auto"
+    width="400"
+    prepend-icon="mdi-home"
+  >
+    <template v-slot:title>
+      This is a title
+    </template>
+
+    <v-card-text>
+      This is content
+    </v-card-text>
+  </v-card>
+  </v-col>
+          </v-row>
+      </v-container>
     <footer-view/>
 </template>
 
 <script>
 import NavbarView from "@/components/NavbarView.vue"
 import FooterView from '@/components/FooterView.vue';
-import { RouterLink } from 'vue-router';
+
 
 export default {
     data() {

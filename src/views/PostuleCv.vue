@@ -20,69 +20,48 @@
                   <p>Téléchargez votre CV et postulez en un seul clic!</p>
                   </div>
                   <v-row justify="center">
-                  <v-dialog
-                  v-model="dialog"
-                  persistent
-                   >
-                <template v-slot:activator="{ props }">
+                        <v-dialog
+      v-model="dialog"
+      fullscreen
+      :scrim="false"
+      transition="dialog-bottom-transition"
+    >
+     <template v-slot:activator="{ props }">
                   <v-btn
                     rounded color="blue" style="margin-top:50px" 
                       v-bind="props"
                          >
                          Télecharger !
                               </v-btn>
-      </template>
-      <v-card>
-        <v-card-title>
-          <span class="text-h5">User Profile</span>
-        </v-card-title>
-        <v-card-text>
-          <v-container>
-            <v-row>
-              <v-col cols="12">
-                  <v-file-input
-                  label="File input"
-                  outlined
-                     dense
-                  ></v-file-input>
-              </v-col>
-              <v-col cols="12">
-                <v-text-field
-                  label="Votre poste actuel ou profession*"
-                  required
-                ></v-text-field>
-              </v-col>
-                  <v-col cols="12">
-                <v-text-field
-                  label="Votre localité actuelle*"
-                  text
-                  required
-                ></v-text-field>
-              </v-col>
-            </v-row>
-          </v-container>
-          <small>*indicates required field</small>
-        </v-card-text>
-        <v-card-actions>
+                               </template>
+         <v-card>
+        <v-toolbar
+          dark
+          color="primary"
+        >
+          <v-btn
+            icon
+            dark
+            @click="dialog = false"
+          >
+            <v-icon>mdi-close</v-icon>
+          </v-btn>
+          <v-toolbar-title>Settings</v-toolbar-title>
           <v-spacer></v-spacer>
-          <v-btn
-            color="blue-darken-1"
-            text
-            @click="dialog = false"
-          >
-            Close
-          </v-btn>
-          <v-btn
-            color="blue-darken-1"
-            text
-            @click="dialog = false"
-          >
-            Save
-          </v-btn>
-        </v-card-actions>
-      </v-card>
-    </v-dialog>
-  </v-row>
+          <v-toolbar-items>
+            <v-btn
+              dark
+              text
+              @click="dialog = false"
+            >
+              Save
+            </v-btn>
+          </v-toolbar-items>
+        </v-toolbar>
+          <v-subheader>User Controls</v-subheader>
+         </v-card>
+         </v-dialog>
+                            </v-row>
             </v-row>
      <v-divider></v-divider>
         </v-container>
@@ -98,79 +77,66 @@
                   <p>création rapide de CV pour en poster un.!</p>
                   </div>
                  <v-row justify="center">
-    <v-dialog
+                    <v-dialog
       v-model="dialog"
-      persistent
+      fullscreen
+      :scrim="false"
+      transition="dialog-bottom-transition"
     >
-      <template v-slot:activator="{ props }">
+     <template v-slot:activator="{ props }">
         <v-btn
         rounded color="blue" style="margin-top:50px" 
           v-bind="props"
         >
          Créer un !
         </v-btn>
-      </template>
-      <v-card>
-        <v-card-title>
-          <span class="text-h5">User Profile</span>
-        </v-card-title>
-        <v-card-text>
-          <v-container>
-            <v-row>
-              <v-col cols="12">
-                <v-text-field
-                  label="Email*"
-                  required
-                ></v-text-field>
-              </v-col>
-              <v-col cols="12">
-                <v-text-field
-                  label="Votre poste actuel ou profession*"
-                  required
-                ></v-text-field>
-              </v-col>
-                  <v-col cols="12">
-                <v-text-field
-                  label="Votre localité actuelle*"
-                  required
-                ></v-text-field>
-              </v-col>
-            </v-row>
-          </v-container>
-          <small>*indicates required field</small>
-        </v-card-text>
-        <v-card-actions>
+     </template>
+         <v-card>
+        <v-toolbar
+          dark
+          color="primary"
+        >
+          <v-btn
+            icon
+            dark
+            @click="dialog = false"
+          >
+            <v-icon>mdi-close</v-icon>
+          </v-btn>
+          <v-toolbar-title>Settings</v-toolbar-title>
           <v-spacer></v-spacer>
-          <v-btn
-            color="blue-darken-1"
-            text
-            @click="dialog = false"
-          >
-            Close
-          </v-btn>
-          <v-btn
-            color="blue-darken-1"
-            text
-            @click="dialog = false"
-          >
-            Save
-          </v-btn>
-        </v-card-actions>
-      </v-card>
-    </v-dialog>
+          <v-toolbar-items>
+            <v-btn
+              dark
+              text
+              @click="dialog = false"
+            >
+              Save
+            </v-btn>
+          </v-toolbar-items>
+        </v-toolbar>
+          <v-subheader>User Controls</v-subheader>
+         </v-card>
+         </v-dialog>
   </v-row>
             </v-row>
         </v-container>
     </div>
-    <footer-view/>
+ <footer-view/>
 </template>
 <script>
 import NavbarView from '@/components/NavbarView.vue'
+import FooterView from '@/components/FooterView'
 export default {
-      data: () => ({
-      dialog: false,
-    }),
-    components:{NavbarView}
+        data () {
+      return {
+        dialog: false,
+        notifications: false,
+        sound: true,
+        widgets: false,
+      }
+    },
+    components:{NavbarView,FooterView}
 }
 </script>
 <style>

@@ -33,8 +33,7 @@
 					placeholder="Password">
 			</div>
         <div class="input-icons">
-			<i class="fa fa-user icon">
-      </i>
+	
 				<input class="input-field"
 					type="text"
 					placeholder="Position">
@@ -66,6 +65,9 @@ export default {
     name:"SignIn"
 }
 </script>
+
+
+
 <style>
         .input-icons i {
             position: absolute;

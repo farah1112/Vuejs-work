@@ -2,7 +2,6 @@
   <v-app>
     <v-main>
       <br>
-      <home-view/>
       <router-view/>
       
     </v-main>
@@ -12,12 +11,9 @@
 </template>
 
 <script>
-import HomeView from './views/HomeView.vue'
-
 export default {
   name: 'App',
   components: {
-    HomeView
 
     
     
