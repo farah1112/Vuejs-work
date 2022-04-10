@@ -67,7 +67,7 @@
       color="#F4FF81"
       size="40"
     >
-      <v-icon> {{article.icon}}   </v-icon>
+      <v-icon> {{article.icon}}</v-icon>
     </v-avatar>
     <p>{{article.text}}</p>
 <v-btn flat rounded color="#F4FF81" style="margin-right:20px">
@@ -134,26 +134,7 @@ View all Jobs!
        </div>
       <br>
       <a class="gotopbtn" href="#"> <v-icon>mdi-arrow-up</v-icon> </a>
-      <v-container>
-          <v-row>
-            <v-col cols="12" md="12" lg="12">
-              <v-card
-    class="mx-auto"
-    width="400"
-    prepend-icon="mdi-home"
-  >
-    <template v-slot:title>
-      This is a title
-    </template>
-
-    <v-card-text>
-      This is content
-    </v-card-text>
-  </v-card>
-  </v-col>
-          </v-row>
-      </v-container>
-    <footer-view/>
+         <footer-view/>
 </template>
 
 <script>

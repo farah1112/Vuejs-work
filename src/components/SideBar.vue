@@ -20,7 +20,7 @@
         <v-layout column align-center>
          <v-flex class="ml-15">
              <v-avatar size="150">
-                 <img src="https://images.pexels.com/photos/927022/pexels-photo-927022.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                 <img src="https://www.pngitem.com/pimgs/m/22-224065_avatar-people-icon-png-transparent-png.png" style="width:150px;height:150px">
              </v-avatar>
          </v-flex>
         </v-layout>

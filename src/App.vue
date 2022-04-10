@@ -3,7 +3,6 @@
     <v-main>
       <br>
       <router-view/>
-      
     </v-main>
      <br>
   </v-app>
