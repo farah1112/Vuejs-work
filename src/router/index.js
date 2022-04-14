@@ -13,7 +13,7 @@ import HomeView from "../views/HomeView"
 import TelechargerView from "../views/TelechargerView"
 import CreerView from "../views/CreerView"
 import CVView from "../views/CVView"
-
+import CVsView from "../views/CVsView"
 
 const routes = [
 
@@ -82,6 +82,12 @@ const routes = [
     path: '/CVView',
     name: 'CVView',
     component:CVView
+    
+  },
+  {
+    path: '/CVsView',
+    name: 'CVsView',
+    component:CVsView
     
   },
 ];
