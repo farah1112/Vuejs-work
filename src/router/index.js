@@ -10,6 +10,9 @@ import DashbordView from '@/views/Admin/DashbordView.vue'
 import GestionUser from '@/views/Admin/GestionUser'
 import PostuleCv from "../views/PostuleCv"
 import HomeView from "../views/HomeView"
+import TelechargerView from "../views/TelechargerView"
+import CreerView from "../views/CreerView"
+import CVView from "../views/CVView"
 
 
 const routes = [
@@ -63,7 +66,24 @@ const routes = [
     component:HomeView
     
   },
- 
+  {
+    path: '/TelechargerView',
+    name: 'TelechargerView',
+    component:TelechargerView
+    
+  },
+  {
+    path: '/CreerView',
+    name: 'CreerView',
+    component:CreerView
+    
+  },
+  {
+    path: '/CVView',
+    name: 'CVView',
+    component:CVView
+    
+  },
 ];
 
 const router = createRouter({

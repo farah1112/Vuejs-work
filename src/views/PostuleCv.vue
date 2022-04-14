@@ -19,9 +19,10 @@
                   <p>Téléchargez votre CV et postulez en un seul clic!</p>
                   </div>
                   <v-row justify="center">
-                  <v-btn
+                 <v-btn
                     rounded color="blue" style="margin-top:50px" 
                       v-bind="props"
+                      to="/TelechargerView"
                          >
                          Télecharger !
                               </v-btn>
@@ -40,51 +41,15 @@
                   
                   <p>création rapide de CV pour en poster un.!</p>
                   </div>
-                 <v-row justify="center">
-                    <v-dialog
-      v-model="dialog"
-      fullscreen
-      :scrim="false"
-      transition="dialog-bottom-transition"
-    >
-     <template v-slot:activator="{ props }">
-        <v-btn
-        rounded color="blue" style="margin-top:50px" 
-          v-bind="props"
-        >
+                 <v-btn
+        rounded color="blue" style="margin-top:50px ;margin-left:180px" 
+         to="/CreerView">
          Créer un !
-        </v-btn>
-     </template>
-         <v-card>
-        <v-toolbar
-          dark
-          color="primary"
-        >
-          <v-btn
-            icon
-            dark
-            @click="dialog = false"
-          >
-            <v-icon>mdi-close</v-icon>
-          </v-btn>
-          <v-toolbar-title>Settings</v-toolbar-title>
-          <v-spacer></v-spacer>
-          <v-toolbar-items>
-            <v-btn
-              dark
-              text
-              @click="dialog = false"
-            >
-              Save
-            </v-btn>
-          </v-toolbar-items>
-        </v-toolbar>
-         </v-card>
-         </v-dialog>
-  </v-row>
+        </v-btn>           
             </v-row>
         </v-container>
     </div>
+    <v-divider></v-divider>
  <footer-view/>
 </template>
 <script>
@@ -93,7 +58,6 @@ import FooterView from '@/components/FooterView'
 export default {
         data () {
       return {
-        dialog: false,
         notifications: false,
         sound: true,
         widgets: false,

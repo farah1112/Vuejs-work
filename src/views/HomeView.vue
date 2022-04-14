@@ -134,6 +134,7 @@ View all Jobs!
        </div>
       <br>
       <a class="gotopbtn" href="#"> <v-icon>mdi-arrow-up</v-icon> </a>
+      <v-divider></v-divider>
          <footer-view/>
 </template>
 

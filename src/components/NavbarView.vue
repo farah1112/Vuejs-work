@@ -1,7 +1,6 @@
 <template>
-
     <v-toolbar dense  app color="transparent">
-      <v-toolbar-title class="text-uppercase-title" ><router-link to="/">CATCH IT </router-link> </v-toolbar-title>
+      <v-toolbar-title class="text-uppercase-title" >CATCH IT</v-toolbar-title>
       <v-spacer></v-spacer>
       <v-btn 
       class="flex-row"  
@@ -48,7 +47,6 @@
    Sign Up
     </v-btn>
     </v-toolbar>
-    <v-img src="test.jpg" style="width:100px"></v-img>
 </template>
 <script>
 export default {
