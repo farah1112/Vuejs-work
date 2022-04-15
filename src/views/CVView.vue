@@ -22,6 +22,8 @@
          <h5>Farahweslati</h5>
          <h6>ingenieur</h6>
          <h6>siliana</h6>
+         <br>
+          <v-btn flat rounded><v-icon size="30">mdi-marker</v-icon></v-btn>
          <v-divider></v-divider>
          <h5>farahwweslati1919@gmail.com</h5>
          </div>
@@ -119,11 +121,274 @@
         </template>
       </v-dialog>
     </v-col>
-             </v-row>
+  </v-row>
 <br>
-<v-btn rounded flat><v-icon>mdi-briefcase-edit</v-icon> Expériences professionnelles</v-btn>
-<p><v-icon>mdi-wallpaper</v-icon> Formations et diplômes</p>
 
+ <v-row justify="center">
+    <v-dialog
+      v-model="dialog"
+      fullscreen
+      :scrim="false"
+      transition="dialog-bottom-transition"
+    >
+      <template v-slot:activator="{ props }">
+<v-btn rounded flat  v-bind="props"><v-icon>mdi-briefcase-edit</v-icon> Expériences professionnelles</v-btn>
+</template>
+      <v-card>
+        <v-toolbar
+          dark
+          color="grey"
+        >
+          <v-btn
+            icon
+            dark
+            @click="dialog = false"
+          >
+            <v-icon>mdi-close</v-icon>
+          </v-btn>
+          <v-toolbar-title>Cancel</v-toolbar-title>
+          <v-spacer></v-spacer>
+          <v-toolbar-items>
+            <v-btn
+              dark
+              text
+              @click="dialog = false"
+            >
+              Save
+            </v-btn>
+          </v-toolbar-items>
+        </v-toolbar>
+         <v-card>
+        <v-card-title>
+          <span class="text-h5">User Profile</span>
+        </v-card-title>
+        <v-card-text>
+          <v-container>
+            <v-row>
+              <v-col
+                cols="12"
+                sm="6"
+                md="4"
+              >
+                <v-text-field
+                  label="Legal first name*"
+                  required
+                ></v-text-field>
+              </v-col>
+              <v-col
+                cols="12"
+                sm="6"
+                md="4"
+              >
+                <v-text-field
+                  label="Legal middle name"
+                  hint="example of helper text only on focus"
+                ></v-text-field>
+              </v-col>
+              <v-col
+                cols="12"
+                sm="6"
+                md="4"
+              >
+                <v-text-field
+                  label="Legal last name*"
+                  hint="example of persistent helper text"
+                  persistent-hint
+                  required
+                ></v-text-field>
+              </v-col>
+              <v-col cols="12">
+                <v-text-field
+                  label="Email*"
+                  required
+                ></v-text-field>
+              </v-col>
+              <v-col cols="12">
+                <v-text-field
+                  label="Password*"
+                  type="password"
+                  required
+                ></v-text-field>
+              </v-col>
+              <v-col
+                cols="12"
+                sm="6"
+              >
+                <v-select
+                  :items="['0-17', '18-29', '30-54', '54+']"
+                  label="Age*"
+                  required
+                ></v-select>
+              </v-col>
+              <v-col
+                cols="12"
+                sm="6"
+              >
+                <v-autocomplete
+                  :items="['Skiing', 'Ice hockey', 'Soccer', 'Basketball', 'Hockey', 'Reading', 'Writing', 'Coding', 'Basejump']"
+                  label="Interests"
+                  multiple
+                ></v-autocomplete>
+              </v-col>
+            </v-row>
+          </v-container>
+          <small>*indicates required field</small>
+        </v-card-text>
+        <v-card-actions>
+          <v-spacer></v-spacer>
+          <v-btn
+            color="blue-darken-1"
+            text
+            @click="dialog = false"
+          >
+            Close
+          </v-btn>
+          <v-btn
+            color="blue-darken-1"
+            text
+            @click="dialog = false"
+          >
+            Save
+          </v-btn>
+        </v-card-actions>
+      </v-card>
+      </v-card>
+    </v-dialog>
+  </v-row>
+<br><br>
+
+ <v-row justify="center">
+    <v-dialog
+      v-model="dialog"
+      fullscreen
+      :scrim="false"
+      transition="dialog-bottom-transition"
+    >
+      <template v-slot:activator="{ props }">
+<v-btn rounded flat  v-bind="props" ><v-icon>mdi-wallpaper</v-icon> Formations et diplômes</v-btn>
+</template>
+      <v-card>
+        <v-toolbar
+          dark
+          color="grey"
+        >
+          <v-btn
+            icon
+            dark
+            @click="dialog = false"
+          >
+            <v-icon>mdi-close</v-icon>
+          </v-btn>
+          <v-toolbar-title>Cancel</v-toolbar-title>
+          <v-spacer></v-spacer>
+          <v-toolbar-items>
+            <v-btn
+              dark
+              text
+              @click="dialog = false"
+            >
+              Save
+            </v-btn>
+          </v-toolbar-items>
+        </v-toolbar>
+         <v-card>
+        <v-card-title>
+          <span class="text-h5">User Profile</span>
+        </v-card-title>
+        <v-card-text>
+          <v-container>
+            <v-row>
+              <v-col
+                cols="12"
+                sm="6"
+                md="4"
+              >
+                <v-text-field
+                  label="Legal first name*"
+                  required
+                ></v-text-field>
+              </v-col>
+              <v-col
+                cols="12"
+                sm="6"
+                md="4"
+              >
+                <v-text-field
+                  label="Legal middle name"
+                  hint="example of helper text only on focus"
+                ></v-text-field>
+              </v-col>
+              <v-col
+                cols="12"
+                sm="6"
+                md="4"
+              >
+                <v-text-field
+                  label="Legal last name*"
+                  hint="example of persistent helper text"
+                  persistent-hint
+                  required
+                ></v-text-field>
+              </v-col>
+              <v-col cols="12">
+                <v-text-field
+                  label="Email*"
+                  required
+                ></v-text-field>
+              </v-col>
+              <v-col cols="12">
+                <v-text-field
+                  label="Password*"
+                  type="password"
+                  required
+                ></v-text-field>
+              </v-col>
+              <v-col
+                cols="12"
+                sm="6"
+              >
+                <v-select
+                  :items="['0-17', '18-29', '30-54', '54+']"
+                  label="Age*"
+                  required
+                ></v-select>
+              </v-col>
+              <v-col
+                cols="12"
+                sm="6"
+              >
+                <v-autocomplete
+                  :items="['Skiing', 'Ice hockey', 'Soccer', 'Basketball', 'Hockey', 'Reading', 'Writing', 'Coding', 'Basejump']"
+                  label="Interests"
+                  multiple
+                ></v-autocomplete>
+              </v-col>
+            </v-row>
+          </v-container>
+          <small>*indicates required field</small>
+        </v-card-text>
+        <v-card-actions>
+          <v-spacer></v-spacer>
+          <v-btn
+            color="blue-darken-1"
+            text
+            @click="dialog = false"
+          >
+            Close
+          </v-btn>
+          <v-btn
+            color="blue-darken-1"
+            text
+            @click="dialog = false"
+          >
+            Save
+          </v-btn>
+        </v-card-actions>
+      </v-card>
+      </v-card>
+    </v-dialog>
+  </v-row>
+<br><br>
  <v-col cols="auto">
       <v-dialog
         transition="dialog-top-transition"
@@ -180,8 +445,8 @@
         </template>
       </v-dialog>
     </v-col>
-
-
+</v-col> 
+<v-col>
   <v-row justify="space-around">
     <v-col cols="auto">
       <v-dialog
@@ -239,11 +504,53 @@
       </v-dialog>
     </v-col>
 </v-row>
-<p><v-icon>mdi-file-compare</v-icon> Accréditations</p>
-</v-col> 
-<v-col>
-<p><v-icon>mdi-school</v-icon> Distinctions</p>
-
+<br>
+ <v-col cols="auto">
+      <v-dialog
+        transition="dialog-top-transition"
+      >
+        <template v-slot:activator="{ props }">
+<v-btn rounded flat v-bind="props" ><v-icon>mdi-school</v-icon> Skills</v-btn>
+</template>
+        <template v-slot:default="{ isActive }">
+          <v-card  align="center">
+              <br>
+        <v-icon size="100" color="#03A9F4">mdi-account-star-outline<h5>Give us YOUR Skills</h5></v-icon>
+           <p>
+             Your skills!
+                   <v-col
+          cols="12"
+          sm="12"
+        >
+        </v-col>
+           </p>
+               
+    <v-select
+    style="border-style:ridge ;width:520px"
+      v-model="select"
+      :items="items2"
+      :rules="[v => !!v || 'Item is required']"
+      label="Item"
+      required
+    ></v-select>
+            <v-card-actions class="justify-end">
+              <v-btn
+                text
+                rounded
+                @click="isActive.value = false"
+              >Annuler</v-btn>
+                <v-btn
+                text
+                rounded
+                style="background-color:green"
+                @click="isActive.value = false"
+              >Enregistrer</v-btn>
+            </v-card-actions>
+          </v-card>
+        </template>
+      </v-dialog>
+    </v-col>
+<br>
 <v-row justify="space-around">
     <v-col cols="auto">
       <v-dialog
@@ -305,34 +612,6 @@
       </v-dialog>
     </v-col>
     </v-row>
-
-
-        <v-col cols="auto">
-      <v-dialog
-        transition="dialog-top-transition"
-      >
-        <template v-slot:activator="{ props }">
-<v-btn rounded flat  v-bind="props"><v-icon>mdi-script-outline</v-icon> Volontariat</v-btn><br><br>
- </template>
-        <template v-slot:default="{ isActive }">
-          <v-card>
-            <v-toolbar
-              color="primary"
-            >Opening from the top</v-toolbar>
-            <v-card-text>
-              <div class="text-h2 pa-12">Hello world!</div>
-            </v-card-text>
-            <v-card-actions class="justify-end">
-              <v-btn
-                text
-                @click="isActive.value = false"
-              >Close</v-btn>
-            </v-card-actions>
-          </v-card>
-        </template>
-      </v-dialog>
-    </v-col>
-
   <v-row justify="space-around">
     <v-col cols="auto">
       <v-dialog
@@ -373,8 +652,6 @@
       </v-dialog>
     </v-col>
     </v-row>
-
-<p><v-icon>mdi-hand-pointing-up</v-icon> Références</p>
 </v-col>
 </v-row>
        </div>
@@ -392,6 +669,10 @@ export default {
     },
     data () {
       return {
+             dialog: false,
+        notifications: false,
+        sound: true,
+        widgets: false,
         value: 10,
         bufferValue: 20,
         interval: 0,
@@ -433,6 +714,62 @@ export default {
         'Avancé',
         'Langue Maternelle',
         ],
+        items2:[
+        'Creativity', 'Persuasion' ,'Collaboration','Adaptability' ,'Time Management', 'Effective communication', 'Emotional intelligence','Conflict management','Teamwork skills','Stress management','Problem-solving','Productivity & organization','Critical thinking','Attention to detail','Data analysis',
+'Web analytics' ,
+'HTML & CSS',
+'Wordpress',
+'Email marketing',
+'Web scraping',
+'CRO and A/B Testing',
+'B2B Marketing',
+'The 4 P-s of Marketing',
+'Consumer Behavior Drivers',
+'Brand management',
+'Creativity',
+'Copywriting',
+'Storytelling',
+'Sales',
+'CMS Tools',
+'Adobe Creative Suite: Illustrator, InDesign, Photoshop',
+'Dreamweaver',
+'Infographics',
+'Photo editing ',
+'Typography: spacing, line height, layout, choosing fonts',
+'Storyboarding',
+'argeting and marketing through visual communications',
+'Logo creation',
+'Digital printing',
+'Integration of visual communication in social media platforms',
+'Creativity',
+'Attention to detail & aesthetics',
+'Interactive media design',
+'Color sense & theory',
+'Ad design',
+'Active listening',
+'Javascript',
+'Graphic User Interfaces (GUI)',
+'Git/Version control (Github, gitlab)',
+'Search Engine Optimization (SEO)',
+'Application Programming Interface (API)',
+'Adobe Photoshop, InDesign',
+'Content Management Systems (CMS)',
+'Testing/Debugging',
+'Responsive design principles',
+'SQL (a must) and Hive (optional)',
+'Programming language (R, Python, Scala, Matlab)',
+'STATA, SPSS, SAS ',
+'Data Mapping',
+'Entity Relationship Diagrams',
+'Wireframes',
+'Big Data tools ',
+'Microsoft Visio',
+'Agile Business Analysis',
+'Machine learning ',
+'System Context Diagrams',
+'Business Process Modeling',
+'Technical and non-technical communication',
+        ]
       }
       
       
@@ -469,8 +806,9 @@ export default {
 }
 </script>
 
-
-
 <style>
-
+.dialog-bottom-transition-enter-active,
+.dialog-bottom-transition-leave-active {
+  transition: transform .2s ease-in-out;
+}
 </style>

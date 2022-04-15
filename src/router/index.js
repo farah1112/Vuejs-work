@@ -14,6 +14,8 @@ import TelechargerView from "../views/TelechargerView"
 import CreerView from "../views/CreerView"
 import CVView from "../views/CVView"
 import CVsView from "../views/CVsView"
+import ProfilCandidat from "../views/ProfilCandidat"
+import ProfilCompany from "../views/ProfilCompany"
 
 const routes = [
 
@@ -88,6 +90,18 @@ const routes = [
     path: '/CVsView',
     name: 'CVsView',
     component:CVsView
+    
+  },
+  {
+    path: '/ProfilCandidat',
+    name: 'ProfilCandidat',
+    component:ProfilCandidat
+    
+  },
+  {
+    path: '/ProfilCompany',
+    name: 'ProfilCompany',
+    component:ProfilCompany
     
   },
 ];
