@@ -15,7 +15,6 @@ import CreerView from "../views/CreerView"
 import CVView from "../views/CVView"
 import CVsView from "../views/CVsView"
 import ProfilCandidat from "../views/ProfilCandidat"
-import ProfilCompany from "../views/ProfilCompany"
 
 const routes = [
 
@@ -98,12 +97,7 @@ const routes = [
     component:ProfilCandidat
     
   },
-  {
-    path: '/ProfilCompany',
-    name: 'ProfilCompany',
-    component:ProfilCompany
-    
-  },
+
 ];
 
 const router = createRouter({
