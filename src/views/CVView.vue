@@ -19,16 +19,92 @@
             <v-avatar     size="90">
          <v-img src="https://toppng.com/uploads/preview/avatar-png-115540218987bthtxfhls.png" style=" width:100px;height:100px"></v-img>
          </v-avatar>
+            <v-col cols="auto">
+      <v-dialog
+        transition="dialog-top-transition"
+      >
+        <template v-slot:activator="{ props }">
+         <v-btn flat rounded v-bind="props"><v-icon size="20">mdi-marker</v-icon></v-btn>
+                    </template>
+        <template v-slot:default="{ isActive }">
+          <v-card>   
+           <v-icon style="margin-left:200px" size="50">
+                  mdi-check-outline </v-icon>
+                    <h5 align="center">Télécharger Votre Photo</h5>
+            <v-card-text>
+               <v-file-input
+    :rules="rules"
+    accept="image/png, image/jpeg, image/bmp"
+    placeholder="Pick an avatar"
+    prepend-icon="mdi-camera"
+    label="Avatar"
+    style="width:400px"
+  ></v-file-input>
+            </v-card-text>
+            <v-card-actions class="justify-end">
+             <v-btn
+                text
+                rounded
+                @click="isActive.value = false"
+              >Annuler</v-btn>
+               <v-btn
+                text
+                rounded
+                @click="isActive.value = false"
+              >ENregistrer</v-btn>
+            </v-card-actions>
+          </v-card>
+        </template>
+      </v-dialog>
+    </v-col>
          <h5>Farahweslati</h5>
          <h6>ingenieur</h6>
          <h6>siliana</h6>
          <br>
-          <v-btn flat rounded><v-icon size="30">mdi-marker</v-icon></v-btn>
+          <v-btn flat rounded><v-icon size="20">mdi-marker</v-icon></v-btn>
          <v-divider></v-divider>
          <h5>farahwweslati1919@gmail.com</h5>
          </div>
-    </v-container>
-    <v-container>
+         <br>
+         <br>
+         <h5 align="center">Compétences</h5>
+      <v-container>
+      <v-banner
+      lines="six"
+      icon="mdi-account-tie"
+      color="grey"
+      class="my-4"
+    >
+      <v-banner-text>
+          <h6><v-icon icon="mdi-grease-pencil" color="red"></v-icon>write your thoughts baby </h6> 
+          <br>
+           <h6><v-icon icon="mdi-file-check-outline" color="green"></v-icon>3abi kes teeey b louuuuuz </h6> 
+      </v-banner-text>
+      <template v-slot:actions>
+        <div class="text-center">
+    <v-menu transition="fab-transition">
+      <template v-slot:activator="{ props }">
+        <v-btn
+          dark
+          color="primary"
+          v-bind="props"
+        >
+           <v-icon>mdi-format-list-bulleted-type</v-icon>
+        </v-btn>
+      </template>
+      <v-list>
+        <v-list-item>
+            <v-list-item-title v-text="'modifier'"></v-list-item-title>
+            </v-list-item>
+              <v-list-item>
+            <v-list-item-title v-text="'supprimer'"></v-list-item-title>
+            </v-list-item>
+      </v-list>
+    </v-menu>
+  </div>
+      </template>
+    </v-banner>
+  </v-container>
         <h5>Langue du CV</h5>
   <v-row justify="space-around">
     <v-col cols="auto">
@@ -123,8 +199,7 @@
     </v-col>
   </v-row>
 <br>
-
- <v-row justify="center">
+  <v-row justify="center">
     <v-dialog
       v-model="dialog"
       fullscreen
@@ -133,11 +208,11 @@
     >
       <template v-slot:activator="{ props }">
 <v-btn rounded flat  v-bind="props"><v-icon>mdi-briefcase-edit</v-icon> Expériences professionnelles</v-btn>
-</template>
+  </template>
       <v-card>
         <v-toolbar
           dark
-          color="grey"
+          color="green"
         >
           <v-btn
             icon
@@ -146,249 +221,275 @@
           >
             <v-icon>mdi-close</v-icon>
           </v-btn>
-          <v-toolbar-title>Cancel</v-toolbar-title>
+          <v-toolbar-title>close</v-toolbar-title>
           <v-spacer></v-spacer>
-          <v-toolbar-items>
-            <v-btn
-              dark
-              text
-              @click="dialog = false"
-            >
-              Save
-            </v-btn>
-          </v-toolbar-items>
         </v-toolbar>
-         <v-card>
-        <v-card-title>
-          <span class="text-h5">User Profile</span>
-        </v-card-title>
-        <v-card-text>
-          <v-container>
-            <v-row>
-              <v-col
-                cols="12"
-                sm="6"
-                md="4"
-              >
-                <v-text-field
-                  label="Legal first name*"
-                  required
-                ></v-text-field>
-              </v-col>
-              <v-col
-                cols="12"
-                sm="6"
-                md="4"
-              >
-                <v-text-field
-                  label="Legal middle name"
-                  hint="example of helper text only on focus"
-                ></v-text-field>
-              </v-col>
-              <v-col
-                cols="12"
-                sm="6"
-                md="4"
-              >
-                <v-text-field
-                  label="Legal last name*"
-                  hint="example of persistent helper text"
-                  persistent-hint
-                  required
-                ></v-text-field>
-              </v-col>
-              <v-col cols="12">
-                <v-text-field
-                  label="Email*"
-                  required
-                ></v-text-field>
-              </v-col>
-              <v-col cols="12">
-                <v-text-field
-                  label="Password*"
-                  type="password"
-                  required
-                ></v-text-field>
-              </v-col>
-              <v-col
-                cols="12"
-                sm="6"
-              >
-                <v-select
-                  :items="['0-17', '18-29', '30-54', '54+']"
-                  label="Age*"
-                  required
-                ></v-select>
-              </v-col>
-              <v-col
-                cols="12"
-                sm="6"
-              >
-                <v-autocomplete
-                  :items="['Skiing', 'Ice hockey', 'Soccer', 'Basketball', 'Hockey', 'Reading', 'Writing', 'Coding', 'Basejump']"
-                  label="Interests"
-                  multiple
-                ></v-autocomplete>
-              </v-col>
-            </v-row>
-          </v-container>
-          <small>*indicates required field</small>
-        </v-card-text>
-        <v-card-actions>
-          <v-spacer></v-spacer>
-          <v-btn
-            color="blue-darken-1"
-            text
-            @click="dialog = false"
-          >
-            Close
-          </v-btn>
-          <v-btn
-            color="blue-darken-1"
-            text
-            @click="dialog = false"
-          >
-            Save
-          </v-btn>
-        </v-card-actions>
-      </v-card>
+      
+      <v-container fluid align="center">
+         <h5>Expériences professionnelles</h5>
+         <v-icon size="50" >mdi-clipboard-check-outline</v-icon>
+ <v-row>
+        <v-col
+          cols="12"
+          sm="6"
+        >
+          <v-text-field
+            v-model="message3"
+            label="Poste"
+            variant="underlined"
+            clearable
+          ></v-text-field>
+        </v-col>
+        
+        <v-col
+          cols="12"
+          sm="6"
+        >
+          <v-text-field
+            v-model="message4"
+            label="Nom de société"
+            variant="underlined"
+            clearable
+          ></v-text-field>
+        </v-col>
+        </v-row>
+          <v-col
+          cols="12"
+          sm="6"
+        >
+            <v-autocomplete
+            ref="country"
+            v-model="country"
+            :rules="[() => !!country || 'This field is required']"
+            :items="countries"
+            label="Country"
+            placeholder="Select..."
+            required
+          ></v-autocomplete>
+          </v-col>
+          <v-row>
+                    <v-col
+          cols="12"
+          sm="6"
+        >
+          <v-text-field
+            v-model="message5"
+            label="Date Début"
+            variant="underlined"
+            clearable
+          ></v-text-field>
+        </v-col>
+                <v-col
+          cols="12"
+          sm="6"
+        >
+          <v-text-field
+            v-model="message6"
+            label="Date Fin"
+            variant="underlined"
+            clearable
+          ></v-text-field>
+        </v-col>
+          </v-row>
+          <v-row>
+          <v-col
+          cols="12"
+          sm="6"
+        >
+          <v-checkbox
+            v-model="ex4"
+            label="Actuellement en poste"
+            color="success"
+            value="success"
+            hide-details
+          ></v-checkbox>
+          </v-col>
+          <v-col
+        cols="12"
+        sm="6"
+      >
+        <v-textarea
+          filled
+          auto-grow
+          label="Describe your expérience"
+          rows="2"
+          row-height="20"
+        ></v-textarea>
+      </v-col>
+          </v-row>  
+
+          <v-row>
+             <v-btn
+                text
+                rounded
+                @click="isActive.value = false"
+              >Annuler</v-btn>
+              <v-spacer></v-spacer>
+                <v-btn
+                text
+                rounded
+                style="background-color:green"
+                @click="isActive.value = false"
+              >Enregistrer</v-btn> 
+              </v-row>
+      </v-container>
+        
       </v-card>
     </v-dialog>
   </v-row>
-<br><br>
 
- <v-row justify="center">
+<br><br>
+  <v-row justify="center">
     <v-dialog
-      v-model="dialog"
+      v-model="dialog1"
       fullscreen
       :scrim="false"
       transition="dialog-bottom-transition"
     >
       <template v-slot:activator="{ props }">
 <v-btn rounded flat  v-bind="props" ><v-icon>mdi-wallpaper</v-icon> Formations et diplômes</v-btn>
-</template>
+  </template>
       <v-card>
         <v-toolbar
           dark
-          color="grey"
+          color="green"
         >
           <v-btn
             icon
             dark
-            @click="dialog = false"
+            @click="dialog1 = false"
           >
             <v-icon>mdi-close</v-icon>
           </v-btn>
-          <v-toolbar-title>Cancel</v-toolbar-title>
+          <v-toolbar-title>close</v-toolbar-title>
           <v-spacer></v-spacer>
-          <v-toolbar-items>
-            <v-btn
-              dark
-              text
-              @click="dialog = false"
-            >
-              Save
-            </v-btn>
-          </v-toolbar-items>
         </v-toolbar>
-         <v-card>
-        <v-card-title>
-          <span class="text-h5">User Profile</span>
-        </v-card-title>
-        <v-card-text>
-          <v-container>
-            <v-row>
-              <v-col
-                cols="12"
-                sm="6"
-                md="4"
-              >
-                <v-text-field
-                  label="Legal first name*"
-                  required
-                ></v-text-field>
-              </v-col>
-              <v-col
-                cols="12"
-                sm="6"
-                md="4"
-              >
-                <v-text-field
-                  label="Legal middle name"
-                  hint="example of helper text only on focus"
-                ></v-text-field>
-              </v-col>
-              <v-col
-                cols="12"
-                sm="6"
-                md="4"
-              >
-                <v-text-field
-                  label="Legal last name*"
-                  hint="example of persistent helper text"
-                  persistent-hint
-                  required
-                ></v-text-field>
-              </v-col>
-              <v-col cols="12">
-                <v-text-field
-                  label="Email*"
-                  required
-                ></v-text-field>
-              </v-col>
-              <v-col cols="12">
-                <v-text-field
-                  label="Password*"
-                  type="password"
-                  required
-                ></v-text-field>
-              </v-col>
-              <v-col
-                cols="12"
-                sm="6"
-              >
-                <v-select
-                  :items="['0-17', '18-29', '30-54', '54+']"
-                  label="Age*"
-                  required
-                ></v-select>
-              </v-col>
-              <v-col
-                cols="12"
-                sm="6"
-              >
-                <v-autocomplete
-                  :items="['Skiing', 'Ice hockey', 'Soccer', 'Basketball', 'Hockey', 'Reading', 'Writing', 'Coding', 'Basejump']"
-                  label="Interests"
-                  multiple
-                ></v-autocomplete>
-              </v-col>
-            </v-row>
-          </v-container>
-          <small>*indicates required field</small>
-        </v-card-text>
-        <v-card-actions>
-          <v-spacer></v-spacer>
-          <v-btn
-            color="blue-darken-1"
-            text
-            @click="dialog = false"
-          >
-            Close
-          </v-btn>
-          <v-btn
-            color="blue-darken-1"
-            text
-            @click="dialog = false"
-          >
-            Save
-          </v-btn>
-        </v-card-actions>
-      </v-card>
+           <v-container fluid align="center">
+         <h5>Formations et diplômes</h5>
+         <v-icon size="50" >mdi-paper-cut-vertical</v-icon>
+ <v-row>
+        <v-col
+          cols="12"
+          sm="6"
+        >
+          <v-text-field
+            v-model="message7"
+            label="Établissement"
+            variant="underlined"
+            clearable
+          ></v-text-field>
+        </v-col>
+        
+        <v-col
+          cols="12"
+          sm="6"
+        >
+          <v-text-field
+            v-model="message8"
+            label="Diplôme"
+            variant="underlined"
+            clearable
+          ></v-text-field>
+        </v-col>
+        </v-row>
+        <v-row>
+          <v-col
+          cols="12"
+          sm="6"
+        >
+            <v-autocomplete
+            ref="country"
+            v-model="country1"
+            :rules="[() => !!country1 || 'This field is required']"
+            :items="countries1"
+            label="Country"
+            placeholder="Select..."
+            required
+          ></v-autocomplete>
+          </v-col>
+             <v-col
+          cols="12"
+          sm="6"
+        >
+          <v-text-field
+            v-model="message9"
+            label="Discipline"
+            variant="underlined"
+            clearable
+          ></v-text-field>
+        </v-col>
+        </v-row>
+          <v-row>
+                    <v-col
+          cols="12"
+          sm="6"
+        >
+          <v-text-field
+            v-model="message5"
+            label="Date Début"
+            variant="underlined"
+            clearable
+          ></v-text-field>
+        </v-col>
+                <v-col
+          cols="12"
+          sm="6"
+        >
+          <v-text-field
+            v-model="message6"
+            label="Date Fin"
+            variant="underlined"
+            clearable
+          ></v-text-field>
+        </v-col>
+          </v-row>
+          <v-row>
+          <v-col
+          cols="12"
+          sm="6"
+        >
+          <v-checkbox
+            v-model="ex4"
+            label="Actuellement Etudiant(e)"
+            color="success"
+            value="success"
+            hide-details
+          ></v-checkbox>
+          </v-col>
+          <v-col
+        cols="12"
+        sm="6"
+      >
+        <v-textarea
+          filled
+          auto-grow
+          label="Describe"
+          rows="2"
+          row-height="20"
+        ></v-textarea>
+      </v-col>
+          </v-row>  
+
+          <v-row>
+             <v-btn
+                text
+                rounded
+                @click="isActive.value = false"
+              >Annuler</v-btn>
+              <v-spacer></v-spacer>
+                <v-btn
+                text
+                rounded
+                style="background-color:green"
+                @click="isActive.value = false"
+              >Enregistrer</v-btn> 
+              </v-row>
+      </v-container>
       </v-card>
     </v-dialog>
   </v-row>
-<br><br>
+
+<br>
  <v-col cols="auto">
       <v-dialog
         transition="dialog-top-transition"
@@ -475,8 +576,7 @@
         </v-col>
            </p>
            <p>
-         Niveau
-               
+         Niveau          
     <v-select
     style="border-style:ridge"
       v-model="select"
@@ -504,42 +604,41 @@
       </v-dialog>
     </v-col>
 </v-row>
-<br>
- <v-col cols="auto">
+
+  <v-row justify="space-around">
+    <v-col cols="auto">
       <v-dialog
-        transition="dialog-top-transition"
+        transition="dialog-bottom-transition"
       >
         <template v-slot:activator="{ props }">
 <v-btn rounded flat v-bind="props" ><v-icon>mdi-school</v-icon> Skills</v-btn>
-</template>
+   </template>
         <template v-slot:default="{ isActive }">
-          <v-card  align="center">
-              <br>
-        <v-icon size="100" color="#03A9F4">mdi-account-star-outline<h5>Give us YOUR Skills</h5></v-icon>
-           <p>
-             Your skills!
-                   <v-col
-          cols="12"
-          sm="12"
-        >
-        </v-col>
-           </p>
-               
-    <v-select
-    style="border-style:ridge ;width:520px"
-      v-model="select"
-      :items="items2"
-      :rules="[v => !!v || 'Item is required']"
-      label="Item"
-      required
-    ></v-select>
+          <v-card align="center">
+               <v-icon size="50">
+                  mdi-check-outline </v-icon>
+                  <h5>show us your skills</h5>
+            <v-card-text>
+               <v-col
+                cols="12"
+                sm="12"
+              >
+                <v-autocomplete
+                  :items="['Coding','Creativity' ,'Persuasion' ,'Collaboration','Adaptability', 'Time Management', 'Effective communication' ,
+                  'Emotional intelligence','Conflict management','Teamwork skills','Stress management','Problem-solving','Productivity & organization','Critical thinking']"
+                  label="Your skills"
+                  multiple
+                  style="width:400px"
+                ></v-autocomplete>
+              </v-col>
+            </v-card-text>
             <v-card-actions class="justify-end">
               <v-btn
                 text
                 rounded
                 @click="isActive.value = false"
               >Annuler</v-btn>
-                <v-btn
+               <v-btn
                 text
                 rounded
                 style="background-color:green"
@@ -550,6 +649,7 @@
         </template>
       </v-dialog>
     </v-col>
+    </v-row>           
 <br>
 <v-row justify="space-around">
     <v-col cols="auto">
@@ -669,13 +769,26 @@ export default {
     },
     data () {
       return {
-             dialog: false,
+       countries: ['Afghanistan', 'Albania', 'Algeria', 'Andorra', 'Angola', 'Anguilla', 'Antigua &amp; Barbuda', 'Argentina', 'Armenia', 'Aruba', 'Australia', 'Austria', 'Azerbaijan', 'Bahamas', 'Bahrain', 'Bangladesh', 'Barbados', 'Belarus', 'Belgium', 'Belize', 'Benin', 'Bermuda', 'Bhutan', 'Bolivia', 'Bosnia &amp; Herzegovina', 'Botswana', 'Brazil', 'British Virgin Islands', 'Brunei', 'Bulgaria', 'Burkina Faso', 'Burundi', 'Cambodia', 'Cameroon', 'Cape Verde', 'Cayman Islands', 'Chad', 'Chile', 'China', 'Colombia', 'Congo', 'Cook Islands', 'Costa Rica', 'Cote D Ivoire', 'Croatia', 'Cruise Ship', 'Cuba', 'Cyprus', 'Czech Republic', 'Denmark', 'Djibouti', 'Dominica', 'Dominican Republic', 'Ecuador', 'Egypt', 'El Salvador', 'Equatorial Guinea', 'Estonia', 'Ethiopia', 'Falkland Islands', 'Faroe Islands', 'Fiji', 'Finland', 'France', 'French Polynesia', 'French West Indies', 'Gabon', 'Gambia', 'Georgia', 'Germany', 'Ghana', 'Gibraltar', 'Greece', 'Greenland', 'Grenada', 'Guam', 'Guatemala', 'Guernsey', 'Guinea', 'Guinea Bissau', 'Guyana', 'Haiti', 'Honduras', 'Hong Kong', 'Hungary', 'Iceland', 'India', 'Indonesia', 'Iran', 'Iraq', 'Ireland', 'Isle of Man', 'Israel', 'Italy', 'Jamaica', 'Japan', 'Jersey', 'Jordan', 'Kazakhstan', 'Kenya', 'Kuwait', 'Kyrgyz Republic', 'Laos', 'Latvia', 'Lebanon', 'Lesotho', 'Liberia', 'Libya', 'Liechtenstein', 'Lithuania', 'Luxembourg', 'Macau', 'Macedonia', 'Madagascar', 'Malawi', 'Malaysia', 'Maldives', 'Mali', 'Malta', 'Mauritania', 'Mauritius', 'Mexico', 'Moldova', 'Monaco', 'Mongolia', 'Montenegro', 'Montserrat', 'Morocco', 'Mozambique', 'Namibia', 'Nepal', 'Netherlands', 'Netherlands Antilles', 'New Caledonia', 'New Zealand', 'Nicaragua', 'Niger', 'Nigeria', 'Norway', 'Oman', 'Pakistan', 'Palestine', 'Panama', 'Papua New Guinea', 'Paraguay', 'Peru', 'Philippines', 'Poland', 'Portugal', 'Puerto Rico', 'Qatar', 'Reunion', 'Romania', 'Russia', 'Rwanda', 'Saint Pierre &amp; Miquelon', 'Samoa', 'San Marino', 'Satellite', 'Saudi Arabia', 'Senegal', 'Serbia', 'Seychelles', 'Sierra Leone', 'Singapore', 'Slovakia', 'Slovenia', 'South Africa', 'South Korea', 'Spain', 'Sri Lanka', 'St Kitts &amp; Nevis', 'St Lucia', 'St Vincent', 'St. Lucia', 'Sudan', 'Suriname', 'Swaziland', 'Sweden', 'Switzerland', 'Syria', 'Taiwan', 'Tajikistan', 'Tanzania', 'Thailand', `Timor L'Este`, 'Togo', 'Tonga', 'Trinidad &amp; Tobago', 'Tunisia', 'Turkey', 'Turkmenistan', 'Turks &amp; Caicos', 'Uganda', 'Ukraine', 'United Arab Emirates', 'United Kingdom', 'United States', 'Uruguay', 'Uzbekistan', 'Venezuela', 'Vietnam', 'Virgin Islands (US)', 'Yemen', 'Zambia', 'Zimbabwe'],
+        countries1: ['Afghanistan', 'Albania', 'Algeria', 'Andorra', 'Angola', 'Anguilla', 'Antigua &amp; Barbuda', 'Argentina', 'Armenia', 'Aruba', 'Australia', 'Austria', 'Azerbaijan', 'Bahamas', 'Bahrain', 'Bangladesh', 'Barbados', 'Belarus', 'Belgium', 'Belize', 'Benin', 'Bermuda', 'Bhutan', 'Bolivia', 'Bosnia &amp; Herzegovina', 'Botswana', 'Brazil', 'British Virgin Islands', 'Brunei', 'Bulgaria', 'Burkina Faso', 'Burundi', 'Cambodia', 'Cameroon', 'Cape Verde', 'Cayman Islands', 'Chad', 'Chile', 'China', 'Colombia', 'Congo', 'Cook Islands', 'Costa Rica', 'Cote D Ivoire', 'Croatia', 'Cruise Ship', 'Cuba', 'Cyprus', 'Czech Republic', 'Denmark', 'Djibouti', 'Dominica', 'Dominican Republic', 'Ecuador', 'Egypt', 'El Salvador', 'Equatorial Guinea', 'Estonia', 'Ethiopia', 'Falkland Islands', 'Faroe Islands', 'Fiji', 'Finland', 'France', 'French Polynesia', 'French West Indies', 'Gabon', 'Gambia', 'Georgia', 'Germany', 'Ghana', 'Gibraltar', 'Greece', 'Greenland', 'Grenada', 'Guam', 'Guatemala', 'Guernsey', 'Guinea', 'Guinea Bissau', 'Guyana', 'Haiti', 'Honduras', 'Hong Kong', 'Hungary', 'Iceland', 'India', 'Indonesia', 'Iran', 'Iraq', 'Ireland', 'Isle of Man', 'Israel', 'Italy', 'Jamaica', 'Japan', 'Jersey', 'Jordan', 'Kazakhstan', 'Kenya', 'Kuwait', 'Kyrgyz Republic', 'Laos', 'Latvia', 'Lebanon', 'Lesotho', 'Liberia', 'Libya', 'Liechtenstein', 'Lithuania', 'Luxembourg', 'Macau', 'Macedonia', 'Madagascar', 'Malawi', 'Malaysia', 'Maldives', 'Mali', 'Malta', 'Mauritania', 'Mauritius', 'Mexico', 'Moldova', 'Monaco', 'Mongolia', 'Montenegro', 'Montserrat', 'Morocco', 'Mozambique', 'Namibia', 'Nepal', 'Netherlands', 'Netherlands Antilles', 'New Caledonia', 'New Zealand', 'Nicaragua', 'Niger', 'Nigeria', 'Norway', 'Oman', 'Pakistan', 'Palestine', 'Panama', 'Papua New Guinea', 'Paraguay', 'Peru', 'Philippines', 'Poland', 'Portugal', 'Puerto Rico', 'Qatar', 'Reunion', 'Romania', 'Russia', 'Rwanda', 'Saint Pierre &amp; Miquelon', 'Samoa', 'San Marino', 'Satellite', 'Saudi Arabia', 'Senegal', 'Serbia', 'Seychelles', 'Sierra Leone', 'Singapore', 'Slovakia', 'Slovenia', 'South Africa', 'South Korea', 'Spain', 'Sri Lanka', 'St Kitts &amp; Nevis', 'St Lucia', 'St Vincent', 'St. Lucia', 'Sudan', 'Suriname', 'Swaziland', 'Sweden', 'Switzerland', 'Syria', 'Taiwan', 'Tajikistan', 'Tanzania', 'Thailand', `Timor L'Este`, 'Togo', 'Tonga', 'Trinidad &amp; Tobago', 'Tunisia', 'Turkey', 'Turkmenistan', 'Turks &amp; Caicos', 'Uganda', 'Ukraine', 'United Arab Emirates', 'United Kingdom', 'United States', 'Uruguay', 'Uzbekistan', 'Venezuela', 'Vietnam', 'Virgin Islands (US)', 'Yemen', 'Zambia', 'Zimbabwe'],
+        country1:null,
+        country: null,
+         dialog: false,
+         dialog1: false,
         notifications: false,
         sound: true,
         widgets: false,
         value: 10,
         bufferValue: 20,
         interval: 0,
+        message3: 'ex:designer!',
+        message4: 'Nom de la société!',
+        message5:'tell us!',
+        message6:'tell us!',
+        message7:'Enter your Établissement!',
+        message8:'Enter your Diplôme!',
+        message9:'Discipline!',
+        ex4:'success',
          countries: ['Anglais','Arabe','Chinois','Espagnol',	'Français','Russe',	'Albanais','Allemand','Amazigh','Arménien','Aymara',
 'Bengali','Catalan','Coréen','Croate','Danois','Guarani','Grec','Hongrois','Italien','Japonais','Kikongo','Kiswahili','Lingala','Malais','Mongol',
 'Néerlandais','Occitan','Ourdou','Persan','Portugais','Quechua','Roumain','Samoan','Serbe','Sesotho','Slovaque','Slovène','Suédois','Tamoul','Turc','Afrikaans','Araona',
@@ -714,65 +827,17 @@ export default {
         'Avancé',
         'Langue Maternelle',
         ],
-        items2:[
-        'Creativity', 'Persuasion' ,'Collaboration','Adaptability' ,'Time Management', 'Effective communication', 'Emotional intelligence','Conflict management','Teamwork skills','Stress management','Problem-solving','Productivity & organization','Critical thinking','Attention to detail','Data analysis',
-'Web analytics' ,
-'HTML & CSS',
-'Wordpress',
-'Email marketing',
-'Web scraping',
-'CRO and A/B Testing',
-'B2B Marketing',
-'The 4 P-s of Marketing',
-'Consumer Behavior Drivers',
-'Brand management',
-'Creativity',
-'Copywriting',
-'Storytelling',
-'Sales',
-'CMS Tools',
-'Adobe Creative Suite: Illustrator, InDesign, Photoshop',
-'Dreamweaver',
-'Infographics',
-'Photo editing ',
-'Typography: spacing, line height, layout, choosing fonts',
-'Storyboarding',
-'argeting and marketing through visual communications',
-'Logo creation',
-'Digital printing',
-'Integration of visual communication in social media platforms',
-'Creativity',
-'Attention to detail & aesthetics',
-'Interactive media design',
-'Color sense & theory',
-'Ad design',
-'Active listening',
-'Javascript',
-'Graphic User Interfaces (GUI)',
-'Git/Version control (Github, gitlab)',
-'Search Engine Optimization (SEO)',
-'Application Programming Interface (API)',
-'Adobe Photoshop, InDesign',
-'Content Management Systems (CMS)',
-'Testing/Debugging',
-'Responsive design principles',
-'SQL (a must) and Hive (optional)',
-'Programming language (R, Python, Scala, Matlab)',
-'STATA, SPSS, SAS ',
-'Data Mapping',
-'Entity Relationship Diagrams',
-'Wireframes',
-'Big Data tools ',
-'Microsoft Visio',
-'Agile Business Analysis',
-'Machine learning ',
-'System Context Diagrams',
-'Business Process Modeling',
-'Technical and non-technical communication',
-        ]
+       
       }
       
       
+    },
+     computed: {
+      form () {
+        return {
+          country: this.country,
+        }
+      },
     },
 
     watch: {
