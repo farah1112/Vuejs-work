@@ -50,6 +50,7 @@
                <v-btn
                 text
                 rounded
+                style="background-color:green"
                 @click="isActive.value = false"
               >ENregistrer</v-btn>
             </v-card-actions>
@@ -61,7 +62,284 @@
          <h6>ingenieur</h6>
          <h6>siliana</h6>
          <br>
-          <v-btn flat rounded><v-icon size="20">mdi-marker</v-icon></v-btn>
+
+
+           <v-row justify="center">
+    <v-dialog
+      v-model="dialog2"
+      fullscreen
+      :scrim="false"
+      transition="dialog-bottom-transition"
+    >
+      <template v-slot:activator="{ props }">
+          <v-btn flat rounded  v-bind="props"><v-icon size="20">mdi-marker</v-icon></v-btn>
+           </template>
+      <v-card>
+        <v-toolbar
+          dark
+          color="green"
+        >
+          <v-btn
+            icon
+            dark
+            @click="dialog2 = false"
+          >
+            <v-icon>mdi-close</v-icon>
+          </v-btn>
+          <v-toolbar-title>close</v-toolbar-title>
+          <v-spacer></v-spacer>
+        </v-toolbar>
+       <v-container fluid align="center">
+         <v-icon size="50">
+           mdi-account-off-outline
+         </v-icon>
+         <h5 align="center">
+           Données personnelles
+         </h5>
+        </v-container>
+   <v-container fluid align="center">
+  <v-card
+    class="mx-auto"
+    max-width="500"
+  >
+    <v-card-title class="text-h6 font-weight-regular justify-space-between">
+      <span>{{ currentTitle }}</span>
+      <v-avatar
+        color="green"
+        size="24"
+        v-text="step"
+      ></v-avatar>
+    </v-card-title>
+
+    <v-window v-model="step">
+      <v-window-item :value="1">
+        <v-card-text>
+          <v-row>
+               <v-col
+          cols="12"
+          sm="6"
+           md="4"
+        >
+         <v-icon>mdi-account-edit</v-icon>
+          <v-text-field
+            color="success"
+            label="Nom"
+            placeholder="Placeholder"
+            variant="outlined"
+    
+          ></v-text-field>
+        </v-col>
+        <v-spacer></v-spacer>
+            <v-col
+          cols="12"
+          sm="6"
+           md="4"
+        >
+         <v-icon>mdi-account-edit</v-icon>
+          <v-text-field
+            color="success"
+            label="Prénom"
+            placeholder="Placeholder"
+            variant="outlined"
+          ></v-text-field>
+        </v-col>
+        </v-row>
+        <v-row>
+            <v-col
+          cols="12"
+          sm="6"
+           md="4"
+        >
+         <v-icon>mdi-network-outline</v-icon>
+          <v-text-field
+            color="success"
+            label="Votre poste actuel ou profession"
+            placeholder="Placeholder"
+            variant="outlined"
+          ></v-text-field>
+        </v-col>
+        <v-spacer></v-spacer>
+        <v-col
+               cols="12"
+          sm="6"
+           md="4">
+            <v-icon>mdi-account-search-outline</v-icon>
+                <v-autocomplete
+            ref="country2"
+            v-model="country2"
+            :rules="[() => !!country2 || 'This field is required']"
+            :items="countries2"
+            label="where do youlive?"
+            placeholder="Select..."
+            required
+          ></v-autocomplete>
+        </v-col>
+        </v-row>
+        </v-card-text>
+      </v-window-item>
+
+      <v-window-item :value="2">
+        <v-card-text>
+                 <v-card-text>
+          <v-row>
+               <v-col
+          cols="12"
+          sm="6"
+           md="4"
+        >
+         <v-icon>mdi-email-check-outline</v-icon>
+          <v-text-field
+            color="success"
+            label="Email"
+            placeholder="Placeholder"
+            variant="outlined"
+    
+          ></v-text-field>
+        </v-col>
+        <v-spacer></v-spacer>
+            <v-col
+          cols="12"
+          sm="6"
+           md="4"
+        >
+         <v-icon>mdi-cellphone-wireless</v-icon>
+          <v-text-field
+            color="success"
+            label="Téléphone"
+            placeholder="Placeholder"
+            variant="outlined"
+          ></v-text-field>
+        </v-col>
+        </v-row>
+        <v-row>
+            <v-col
+          cols="12"
+          sm="6"
+           md="4"
+        >
+         <v-icon>mdi-map-marker-outline</v-icon>
+          <v-text-field
+            color="success"
+            label="Adresse"
+            placeholder="Placeholder"
+            variant="outlined"
+          ></v-text-field>
+        </v-col>
+        <v-spacer></v-spacer>
+        <v-col
+               cols="12"
+          sm="6"
+           md="4">
+          <v-icon>mdi-code-tags-check</v-icon>
+          <v-text-field
+            color="success"
+            label="Code postal"
+            placeholder="Placeholder"
+            variant="outlined"
+          ></v-text-field>
+        </v-col>
+        </v-row>
+        <v-row>
+             <v-col
+               cols="12"
+          sm="6"
+           md="4">
+          <v-icon>mdi-account-question-outline</v-icon>
+          <v-text-field
+            color="success"
+            label="Etat"
+            placeholder="Placeholder"
+            variant="outlined"
+          ></v-text-field>
+        </v-col>
+        <v-spacer></v-spacer>
+           <v-col
+               cols="12"
+          sm="6"
+           md="4">
+            <v-icon>mdi-airplane</v-icon>
+                <v-autocomplete
+            ref="country3"
+            v-model="country3"
+            :rules="[() => !!country3 || 'This field is required']"
+            :items="countries3"
+            label="Ville"
+            placeholder="Select..."
+            required
+          ></v-autocomplete>
+        </v-col>
+        </v-row>
+        </v-card-text>
+        </v-card-text>
+      </v-window-item>
+
+      <v-window-item :value="3">
+        <v-container>
+          <v-row>
+            <v-col
+               cols="12"
+          sm="12">
+          <v-icon>mdi-map-minus</v-icon>
+          <v-text-field
+            color="success"
+            label="Nationalité"
+            placeholder="Placeholder"
+            variant="outlined"
+          ></v-text-field>
+        </v-col>
+        </v-row>
+        <v-row>
+          <v-col
+               cols="12"
+          sm="12">
+          <v-icon>mdi-update</v-icon>
+          <v-text-field
+            color="success"
+            label="Date de naissance"
+            placeholder="Placeholder"
+            variant="outlined"
+          ></v-text-field>
+        </v-col>
+</v-row>
+        </v-container>
+      </v-window-item>
+    </v-window>
+
+    <v-divider></v-divider>
+
+    <v-card-actions>
+      <v-btn
+        v-if="step > 1"
+        text
+        @click="step--"
+      >
+        Back
+      </v-btn>
+      <v-spacer></v-spacer>
+      <v-btn
+        v-if="step < 3"
+        color="black"
+        depressed
+        @click="step++"
+      >
+        Next
+      </v-btn>
+       <v-btn
+        v-if="step >2"
+        color="black"
+        depressed
+        style="background-color:green"
+      >
+        Enregistrer
+      </v-btn>
+    </v-card-actions>
+  </v-card>
+   </v-container>
+      </v-card>
+    </v-dialog>
+           </v-row>
+
+
          <v-divider></v-divider>
          <h5>farahwweslati1919@gmail.com</h5>
          </div>
@@ -775,6 +1053,7 @@ export default {
         country: null,
          dialog: false,
          dialog1: false,
+        dialog2: false,
         notifications: false,
         sound: true,
         widgets: false,
@@ -789,12 +1068,50 @@ export default {
         message8:'Enter your Diplôme!',
         message9:'Discipline!',
         ex4:'success',
+           step: 1,
          countries: ['Anglais','Arabe','Chinois','Espagnol',	'Français','Russe',	'Albanais','Allemand','Amazigh','Arménien','Aymara',
 'Bengali','Catalan','Coréen','Croate','Danois','Guarani','Grec','Hongrois','Italien','Japonais','Kikongo','Kiswahili','Lingala','Malais','Mongol',
 'Néerlandais','Occitan','Ourdou','Persan','Portugais','Quechua','Roumain','Samoan','Serbe','Sesotho','Slovaque','Slovène','Suédois','Tamoul','Turc','Afrikaans','Araona',
 'Azéri','Baure','Bésiro','Bichelamar','Biélorusse','Birman','Bulgare','Canichana','Cavineña','Cayubaba','Chácobo','Chichewa','Chimane',
 'Créole de Guinée-Bissau','Créole Antillais','Créole seychellois','Divehi','Dzongkha','Ese ejja','Estonien',],
-            country: null,
+           countries2:['Ariana',
+ 'Béja',
+ 'Ben Arous',
+ 'Bizerte',
+ 'Gabès' ,'Gafsa', 'Jendouba', 'Kairouan' ,'Kasserine', 'Kébili', 'Kef',
+'Mahdia',
+ 'Manouba',
+'Médenine',
+ 'Monastir',
+ 'Nabeul',
+ 'Sfax',
+ 'Sidi Bouzid',
+' Siliana',
+'Sousse',
+' Tataouine',
+ 'Tozeur',
+ 'Tunis',
+'Zaghouan',],
+     countries3:['Ariana',
+ 'Béja',
+ 'Ben Arous',
+ 'Bizerte',
+ 'Gabès' ,'Gafsa', 'Jendouba', 'Kairouan' ,'Kasserine', 'Kébili', 'Kef',
+'Mahdia',
+ 'Manouba',
+'Médenine',
+ 'Monastir',
+ 'Nabeul',
+ 'Sfax',
+ 'Sidi Bouzid',
+' Siliana',
+'Sousse',
+' Tataouine',
+ 'Tozeur',
+ 'Tunis',
+'Zaghouan',],
+            country2: null,
+            country3: null,
             country:this.country,
             select: null,
       items: [
@@ -839,7 +1156,15 @@ export default {
         }
       },
     },
-
+   computed: {
+      currentTitle () {
+        switch (this.step) {
+          case 1: return 'Profil'
+          case 2: return 'Données personnelles'
+          default: return 'Autres Informations'
+        }
+      },
+    },
     watch: {
       value (val) {
         if (val < 100) return
