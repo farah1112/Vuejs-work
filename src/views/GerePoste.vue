@@ -53,100 +53,90 @@
     </v-layout>
          </v-col>
          <v-col cols="12" md="8">
-<v-icon size="20">mdi-mailbox-open-up-outline</v-icon>
-<h5 class="font-weight-medium">Nous contacter</h5> 
-         <v-row>
-             <v-col
-          cols="12"
-          md="6"
-        >
-        <p>Nom</p>
-          <v-text-field
-            label="Nom"
-            placeholder="Placeholder"
-            variant="outlined"
-             prepend-inner-icon="mdi-account-question-outline"
-          ></v-text-field>
-        </v-col>
-             <v-col
-          cols="12"
-          md="6"
-        >
-        <p>Prénom</p>
-          <v-text-field
-            label="Prénom"
-            placeholder="Placeholder"
-            variant="outlined"
-             prepend-inner-icon="mdi-account-question-outline"
-          ></v-text-field>
-        </v-col>
-         </v-row>
-         <v-row>
-             <v-col
-          cols="12"
-          md="6"
-        >
-        <p>Email</p>
-          <v-text-field
-            label="Email"
-            placeholder="Placeholder"
-            variant="outlined"
-             prepend-inner-icon="mdi-email-variant"
-          ></v-text-field>
-        </v-col>
-             <v-col
-          cols="12"
-          md="6"
-        >
-        <p>Téléphone</p>
-          <v-text-field
-            label="Téléphone"
-            placeholder="Placeholder"
-            variant="outlined"
-             prepend-inner-icon="mdi-phone-settings"
-          ></v-text-field>
-        </v-col>
-         </v-row>
-          <v-row>
-             <v-col
-          cols="12"
-          md="12"
-        >
-        <p>Sujet</p>
-          <v-text-field
-            label="Sujet"
-            prepend-inner-icon="mdi-file-document-edit-outline"
-            placeholder="Placeholder"
-            variant="outlined"
-          ></v-text-field>
-        </v-col>
-            <v-col
-          cols="12"
-          md="12"
-        >
-        <p>Votre Message!</p>
-             <v-textarea
-      prepend-inner-icon="mdi-file-document-edit-outline"
-      background-color="grey lighten-2"
-      color="cyan"
-      label="Votre Message!"
-    ></v-textarea>
-        </v-col>
-        <v-row>
-          <v-col cols="12" md="4">
+             <br>
+             <v-row>
+                 <v-col cols="12" md="6">
+             <h5 class="font-weight-bold">Gérez vos Postes</h5>
+             </v-col>
+             <v-col cols="12" md="6">
+                 <v-btn  prepend-icon="mdi-file-download-outline" rounded flat color="blue" to="PosteCompany">Publier une nouvelle Poste</v-btn>
+             </v-col>
+             </v-row>
+             <v-row>
+                 <v-col cols="12" md="12">
+                     <v-tabs
+                  v-model="tab"
+                   >
+      <v-tab value="one">Actif[0]</v-tab>
+      <v-tab value="two">Suspendu[0]</v-tab>
+      <v-tab value="three">Expiré[0]</v-tab>
+       <v-tab value="four">Ebauchés[1]</v-tab>
+    </v-tabs>
 
-          </v-col>
-          <v-col cols="12" md="8">
-              <v-btn 
-      variant="outlined"
-      color="green"
-    >
-      Envoyer!
-    </v-btn>
-          </v-col>
-        </v-row>
-    </v-row>
+    <v-card-text>
+      <v-window v-model="tab">
+        <v-window-item value="one">
+          One
+        </v-window-item>
+
+        <v-window-item value="two">
+          Two
+        </v-window-item>
+
+        <v-window-item value="three">
+          Three
+        </v-window-item>
+        
+        <v-window-item value="four">
+          <v-banner
+    lines="two"
+    color="deep-purple-accent-4"
+  >
+    <template v-slot:prepend>
+    </template>
+<v-col>
+    <v-banner-text class="text-h5 font-weight-bold">
+      Designer
+      </v-banner-text>
+       <br>
+       <v-banner-text class="text-h6 font-weight-bold">
+      siliana
+    </v-banner-text>
+    </v-col>
+<v-col>
+    <v-banner-actions>
+      <v-btn rounded flat color="blue">Publier</v-btn>
+    </v-banner-actions>
+      <v-banner-actions>
+    <v-menu transition="fab-transition">
+      <template v-slot:activator="{ props }">
+        <v-btn
+          dark
+          color="blue"
+          v-bind="props"
+        >
+           <v-icon>mdi-format-list-bulleted-type</v-icon>
+        </v-btn>
+      </template>
+      <v-list>
+        <v-list-item>
+            <v-list-item-title v-text="'modifier'"></v-list-item-title>
+            </v-list-item>
+              <v-list-item>
+            <v-list-item-title v-text="'supprimer'"></v-list-item-title>
+            </v-list-item>
+      </v-list>
+    </v-menu>
+    </v-banner-actions>
+    </v-col>
+  </v-banner>
+        </v-window-item>
+      </v-window>
+    </v-card-text>
+                 </v-col>
+             </v-row>
          </v-col>
+         
          </v-row>
   </div>   
     <v-divider></v-divider>
@@ -157,6 +147,9 @@ import NavbarView from '@/components/NavbarView.vue'
 import FooterView from '@/components/FooterView.vue'
 export default {
   components: { NavbarView, FooterView },
+  data: () => ({
+      tab: null,
+    }),
 }
 </script>
 <style>

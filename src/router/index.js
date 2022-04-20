@@ -17,6 +17,12 @@ import CVsView from "../views/CVsView"
 import ProfilCandidat from "../views/ProfilCandidat"
 import PosteCompany from "../views/PosteCompany"
 import ContactCompany from "../views/ContactCompany"
+import GerePoste from "../views/GerePoste"
+import CandidatureCompany from "../views/CandidatureCompany"
+import RechercheCv from "../views/RechercheCv"
+import SaveCv from "../views/SaveCv"
+import StatistCompany from "../views/StatistCompany"
+
 const routes = [
 
   {
@@ -108,6 +114,36 @@ const routes = [
     path: '/ContactCompany',
     name: 'ContactCompany',
     component:ContactCompany
+    
+  },
+  {
+    path: '/GerePoste',
+    name: 'GerePoste',
+    component:GerePoste
+    
+  },
+  {
+    path: '/CandidatureCompany',
+    name: 'CandidatureCompany',
+    component:CandidatureCompany
+    
+  },
+  {
+    path: '/RechercheCv',
+    name: 'RechercheCv',
+    component:RechercheCv
+    
+  },
+  {
+    path: '/SaveCv',
+    name: 'SaveCv',
+    component:SaveCv
+    
+  },
+  {
+    path: '/StatistCompany',
+    name: 'StatistCompany',
+    component:StatistCompany
     
   },
 
