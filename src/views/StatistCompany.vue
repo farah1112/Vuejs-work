@@ -52,7 +52,16 @@
       <v-main style="height: 750px"></v-main>
     </v-layout>
          </v-col>
-         <!--here you write your code-->
+         <v-row>
+              <v-col cols="12" md="12">
+                 <br><br>
+             <h5 class="font-weight-bold">Statistiques Candidatures</h5>
+             </v-col>
+         </v-row>
+         <v-row>
+           <v-col cols="12" md="12">
+           </v-col>
+         </v-row>
          </v-row>
   </div>   
     <v-divider></v-divider>

@@ -52,7 +52,53 @@
       <v-main style="height: 750px"></v-main>
     </v-layout>
          </v-col>
-         <!--here you write your code-->
+      <v-col cols="12" md="8">
+             <br>
+             <v-row>
+                 <v-col cols="12" md="12">
+             <h5 class="font-weight-bold">Candidatures</h5>
+             </v-col>
+             </v-row>
+             <v-row>
+                 <v-col cols="12" md="12">
+                     <v-tabs
+                  v-model="tab"
+                   >
+      <v-tab value="one">Toutes[0]</v-tab>
+      <v-tab value="two">Nouvelles[0]</v-tab>
+      <v-tab value="three">Préselectionnéess[0]</v-tab>
+       <v-tab value="four">Réfusées[1]</v-tab>
+    </v-tabs>
+
+    <v-card-text>
+      <v-window v-model="tab">
+        <v-window-item value="one">
+          One
+        </v-window-item>
+
+        <v-window-item value="two">
+          Two
+        </v-window-item>
+
+        <v-window-item value="three">
+          Three
+        </v-window-item>
+        
+        <v-window-item value="four">
+            Four
+        </v-window-item>
+      </v-window>
+    </v-card-text>
+                 </v-col>
+             </v-row>
+             <v-row>
+               <v-col cols="12" md="6"></v-col>
+                <v-col cols="12" md="6">
+                 <v-btn  prepend-icon="mdi-file-download-outline" rounded flat color="blue" to="PosteCompany">Publier une nouvelle Poste</v-btn>
+             </v-col>
+             </v-row>
+              
+         </v-col>
          </v-row>
   </div>   
     <v-divider></v-divider>

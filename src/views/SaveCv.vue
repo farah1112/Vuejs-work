@@ -52,7 +52,42 @@
       <v-main style="height: 750px"></v-main>
     </v-layout>
          </v-col>
-         <!--here you write your code-->
+    <v-col cols="12" md="8">
+<v-icon size="40" color="green">mdi-file-document</v-icon>
+<h5 class="font-weight-medium">Créer un dossier</h5> 
+         <v-row>
+             <v-col
+          cols="12"
+          md="12"
+        >
+        <p>Nom du dossier</p>
+          <v-text-field
+            label="Nom du dossier"
+            placeholder="Placeholder"
+            variant="outlined"
+             prepend-inner-icon="mdi-file-document"
+          ></v-text-field>
+        </v-col>
+         </v-row>
+         <v-row>
+           <v-col  cols="12" md="4"></v-col>
+             <v-col
+          cols="12"
+          md="8"
+        >
+       <v-btn flat rounded color="#B2FF59" style="padding-left:100px;padding-right:100px">Confirmer</v-btn>
+        </v-col>
+         </v-row>
+         <v-row>
+             <v-col  cols="12" md="4"></v-col>
+             <v-col
+          cols="12"
+          md="8"
+        >
+         <v-btn flat rounded color="#B2FF59" style="padding-left:110px;padding-right:110px">Annuler</v-btn>
+        </v-col>
+         </v-row>
+         </v-col>
          </v-row>
   </div>   
     <v-divider></v-divider>

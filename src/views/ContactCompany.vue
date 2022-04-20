@@ -134,14 +134,14 @@
         </v-col>
         <v-row>
           <v-col cols="12" md="4">
-
           </v-col>
           <v-col cols="12" md="8">
-              <v-btn 
+               <v-btn
+                prepend-icon=" mdi-truck-check"
       variant="outlined"
       color="green"
     >
-      Envoyer!
+    Envoyer le contenu!
     </v-btn>
           </v-col>
         </v-row>
