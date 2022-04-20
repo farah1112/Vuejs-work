@@ -8,8 +8,8 @@
       rounded
       color="grey"
       dark
-      to="/"
-    > <v-icon color="grey">mdi-volume-high</v-icon>
+      to="/PublierPoste"
+    > <v-icon color="grey" >mdi-volume-high</v-icon>
     Publier Poste
     </v-btn>
      <v-btn 
@@ -18,7 +18,7 @@
       color="grey"
       dark
       to="/"
-    > <v-icon color="grey">mdi-volume-high</v-icon>
+    > <v-icon color="grey">mdi-account-search-outline</v-icon>
     chercher 
     </v-btn>
  <v-btn 
