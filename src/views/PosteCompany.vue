@@ -245,6 +245,28 @@
         </v-col>
         </v-row>
         <v-row>
+          <v-col cols="12" md="12">
+              <v-radio-group v-model="radios">
+        <p>Demandez-vous aux candidats de soumettre un CV?</p>
+      <v-radio value="oui">
+        <template v-slot:label>
+          <div>Of course it's <strong class="success--text">oui</strong></div>
+        </template>
+      </v-radio>
+      <v-radio value="Nom">
+        <template v-slot:label>
+          <div>Definitely <strong class="primary--text">Nom</strong></div>
+        </template>
+      </v-radio>
+       <v-radio value="Optionnel">
+        <template v-slot:label>
+          <div>it's<strong class="primary--text">Optionnel</strong></div>
+        </template>
+      </v-radio>
+    </v-radio-group>
+          </v-col>
+        </v-row>
+        <v-row>
           <v-col cols="12" md="4">
           </v-col>
           <v-col cols="12" md="8">
@@ -268,6 +290,11 @@ import NavbarView from '@/components/NavbarView.vue'
 import FooterView from '@/components/FooterView.vue'
 export default {
   components: { NavbarView, FooterView },
+   data () {
+      return {
+        radios: 'oui',
+      }
+    },
 }
 </script>
 <style>

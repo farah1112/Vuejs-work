@@ -52,16 +52,51 @@
       <v-main style="height: 750px"></v-main>
     </v-layout>
          </v-col>
+         <v-col cols="12" md="8">
          <v-row>
               <v-col cols="12" md="12">
                  <br><br>
+                 <v-icon color="green" size="40">mdi-signal-cellular-outline</v-icon>
              <h5 class="font-weight-bold">Statistiques Candidatures</h5>
              </v-col>
          </v-row>
          <v-row>
            <v-col cols="12" md="12">
+              <v-table
+    fixed-header
+    height="300px"
+  >
+    <thead>
+      <tr>
+        <th class="text-left">
+          Name
+        </th>
+        <th class="text-left">
+          Calories
+        </th>
+         <th class="text-left">
+          Calories1
+        </th>
+         <th class="text-left">
+          Calories2
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr
+        v-for="item in desserts"
+        :key="item.name"
+      >
+        <td>{{ item.name }}</td>
+        <td>{{ item.calories }}</td>
+        <td>{{ item.calories }}</td>
+        <td>{{ item.calories }}</td>
+      </tr>
+    </tbody>
+              </v-table>
            </v-col>
          </v-row>
+          </v-col> 
          </v-row>
   </div>   
     <v-divider></v-divider>
@@ -72,6 +107,52 @@ import NavbarView from '@/components/NavbarView.vue'
 import FooterView from '@/components/FooterView.vue'
 export default {
   components: { NavbarView, FooterView },
+   data () {
+      return {
+        desserts: [
+          {
+            name: 'Frozen Yogurt',
+            calories: 159,
+          },
+          {
+            name: 'Ice cream sandwich',
+            calories: 237,
+          },
+          {
+            name: 'Eclair',
+            calories: 262,
+          },
+          {
+            name: 'Cupcake',
+            calories: 305,
+          },
+          {
+            name: 'Gingerbread',
+            calories: 356,
+          },
+          {
+            name: 'Jelly bean',
+            calories: 375,
+          },
+          {
+            name: 'Lollipop',
+            calories: 392,
+          },
+          {
+            name: 'Honeycomb',
+            calories: 408,
+          },
+          {
+            name: 'Donut',
+            calories: 452,
+          },
+          {
+            name: 'KitKat',
+            calories: 518,
+          },
+        ],
+      }
+    },
 }
 </script>
 <style>
