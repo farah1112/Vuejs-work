@@ -16,7 +16,6 @@ import CVView from "../views/CVView"
 import CVsView from "../views/CVsView"
 import ProfilCandidat from "../views/ProfilCandidat"
 import PosteCompany from "../views/PosteCompany"
-import ContactCompany from "../views/ContactCompany"
 import GerePoste from "../views/GerePoste"
 import CandidatureCompany from "../views/CandidatureCompany"
 import RechercheCv from "../views/RechercheCv"
@@ -108,12 +107,6 @@ const routes = [
     path: '/PosteCompany',
     name: 'PosteCompany',
     component:PosteCompany
-    
-  },
-  {
-    path: '/ContactCompany',
-    name: 'ContactCompany',
-    component:ContactCompany
     
   },
   {

@@ -38,15 +38,6 @@
             <br><br>
           <v-btn  flat rounded prepend-icon=" mdi-briefcase-download-outline" title="CV's sauvgardés" value="CV's sauvgardés" to="SaveCv">CV's sauvgardés</v-btn>
           <br><br>
-             <v-col>
-           <p class="font-weight-bold">
-             En savoir Plus!
-              </p>
-              </v-col>     
-             <v-btn flat rounded prepend-icon="mdi-email-open-outline" title="Nous contacter" value="Nous contacter" to="/ContactCompany">
-             Nous contacter!
-            </v-btn>
-            <br>
         </v-list>
       </v-navigation-drawer>
       <v-main style="height: 750px"></v-main>
@@ -67,69 +58,116 @@
                      <v-tabs
                   v-model="tab"
                    >
-      <v-tab value="one">Actif[0]</v-tab>
-      <v-tab value="two">Suspendu[0]</v-tab>
-      <v-tab value="three">Expiré[0]</v-tab>
-       <v-tab value="four">Ebauchés[1]</v-tab>
+      <v-tab value="one">All Posts</v-tab>
+      <v-tab value="two">En attente</v-tab>
+       <v-tab value="four">sauvgardés</v-tab>
     </v-tabs>
 
     <v-card-text>
       <v-window v-model="tab">
         <v-window-item value="one">
-          One
-        </v-window-item>
+         <v-row>
+        <v-col cols="12" md="12">
+          <v-row>
+          <v-col cols="12" md="12">
+ <h5 class="font-italic">Développeur web Full Stack / Développeur web React</h5>
+      <v-col cols="12">
+        <v-icon color="yellow" size="30">mdi-flag-variant-outline</v-icon>
+      <h6 class="font-weight-bold"> Tunis</h6>
+      <p>On recrute un Développeur web Full Stack / Développeur web React.js - Français 
+Vous êtes aussi à l’aise dans le Frontend que le Backend?<br> Vous aimez travailler avec les plus récentes technologies telles que ASP.NET Core, React.js, Typescript,...</p>
+   <v-chip
+      class="ma-2"
+      color="success"
+      variant="outlined"
+    >
+      <v-icon start icon="mdi-progress-clock"></v-icon>
+      il y'a 14heures
+    </v-chip>
+
+    <v-chip
+      class="ma-2"
+      color="primary"
+      variant="outlined"
+    >
+      postuler facilement
+      <v-icon end icon="mdi-face"></v-icon>
+    </v-chip>
+</v-col>
+  </v-col>
+  </v-row>
+  </v-col>
+  </v-row>
+   </v-window-item>
 
         <v-window-item value="two">
-          Two
+          <v-row>
+        <v-col cols="12" md="12">
+          <v-row>
+          <v-col cols="12" md="12">
+ <h5 class="font-italic">Développeur web Full Stack / Développeur web React</h5>
+      <v-col cols="12">
+        <v-icon color="yellow" size="30">mdi-flag-variant-outline</v-icon>
+      <h6 class="font-weight-bold"> Tunis</h6>
+      <p>On recrute un Développeur web Full Stack / Développeur web React.js - Français 
+Vous êtes aussi à l’aise dans le Frontend que le Backend?<br> Vous aimez travailler avec les plus récentes technologies telles que ASP.NET Core, React.js, Typescript,...</p>
+   <v-chip
+      class="ma-2"
+      color="success"
+      variant="outlined"
+    >
+      <v-icon start icon="mdi-progress-clock"></v-icon>
+      il y'a 14heures
+    </v-chip>
+
+    <v-chip
+      class="ma-2"
+      color="primary"
+      variant="outlined"
+    >
+      postuler facilement
+      <v-icon end icon="mdi-face"></v-icon>
+    </v-chip>
+</v-col>
+  </v-col>
+  </v-row>
+  </v-col>
+  </v-row>
         </v-window-item>
 
-        <v-window-item value="three">
-          Three
-        </v-window-item>
-        
         <v-window-item value="four">
-          <v-banner
-    lines="two"
-    color="deep-purple-accent-4"
-  >
-    <template v-slot:prepend>
-    </template>
-<v-col>
-    <v-banner-text class="text-h5 font-weight-bold">
-      Designer
-      </v-banner-text>
-       <br>
-       <v-banner-text class="text-h6 font-weight-bold">
-      siliana
-    </v-banner-text>
-    </v-col>
-<v-col>
-    <v-banner-actions>
-      <v-btn rounded flat color="blue">Publier</v-btn>
-    </v-banner-actions>
-      <v-banner-actions>
-    <v-menu transition="fab-transition">
-      <template v-slot:activator="{ props }">
-        <v-btn
-          dark
-          color="blue"
-          v-bind="props"
-        >
-           <v-icon>mdi-format-list-bulleted-type</v-icon>
-        </v-btn>
-      </template>
-      <v-list>
-        <v-list-item>
-            <v-list-item-title v-text="'modifier'"></v-list-item-title>
-            </v-list-item>
-              <v-list-item>
-            <v-list-item-title v-text="'supprimer'"></v-list-item-title>
-            </v-list-item>
-      </v-list>
-    </v-menu>
-    </v-banner-actions>
-    </v-col>
-  </v-banner>
+       <v-row>
+        <v-col cols="12" md="12">
+          <v-row>
+          <v-col cols="12" md="12">
+ <h5 class="font-italic">Développeur web Full Stack / Développeur web React</h5>
+      <v-col cols="12">
+        <v-icon color="yellow" size="30">mdi-flag-variant-outline</v-icon>
+      <h6 class="font-weight-bold"> Tunis</h6>
+      <p>On recrute un Développeur web Full Stack / Développeur web React.js - Français 
+Vous êtes aussi à l’aise dans le Frontend que le Backend?<br> Vous aimez travailler avec les plus récentes technologies telles que ASP.NET Core, React.js, Typescript,...</p>
+   <v-chip
+      class="ma-2"
+      color="success"
+      variant="outlined"
+    >
+      <v-icon start icon="mdi-progress-clock"></v-icon>
+      il y'a 14heures
+    </v-chip>
+
+    <v-chip
+      class="ma-2"
+      color="primary"
+      variant="outlined"
+    >
+      postuler facilement
+      <v-icon end icon="mdi-face"></v-icon>
+    </v-chip>
+</v-col>
+  </v-col>
+  </v-row>
+  </v-col>
+  </v-row>
         </v-window-item>
       </v-window>
     </v-card-text>
