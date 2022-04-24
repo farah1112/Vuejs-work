@@ -21,6 +21,9 @@ import CandidatureCompany from "../views/CandidatureCompany"
 import RechercheCv from "../views/RechercheCv"
 import SaveCv from "../views/SaveCv"
 import StatistCompany from "../views/StatistCompany"
+import CvForm from "../views/Profil/CvForm"
+import LettreForm from "../views/Profil/LettreForm"
+import ModifierPost from "../views/ModifierPost"
 
 const routes = [
 
@@ -137,6 +140,24 @@ const routes = [
     path: '/StatistCompany',
     name: 'StatistCompany',
     component:StatistCompany
+    
+  },
+  {
+    path: '/CvForm',
+    name: 'CvForm',
+    component:CvForm
+    
+  },
+  {
+    path: '/LettreForm',
+    name: 'LettreForm',
+    component:LettreForm
+    
+  },
+  {
+    path: '/ModifierPost',
+    name: 'ModifierPost',
+    component:ModifierPost
     
   },
 
