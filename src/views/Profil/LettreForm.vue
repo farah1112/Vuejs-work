@@ -2,21 +2,16 @@
 <navbar-view/>
    <v-container fluid >
     <v-row>
-         <v-col cols="12" md="2">
-         <v-img src="https://thumbs.dreamstime.com/b/image-de-profil-personnage-dessin-anim-d-avatar-femme-affaires-avec-la-conception-graphique-illustration-vecteur-portrait-anim%C3%A9-149127610.jpg" style="width:200px ;height:200px ; border:solid"></v-img> 
-        </v-col>
         <v-col cols="12" md="4">
-            <h5 class="text-h3  font-italic" style="color:#6D4C41">Weslati Farah</h5>
-            <p class="font-italic text-h5" style="color:#8D6E63">Dévéloper</p>
-               <p><v-icon color="green">mdi-cellphone</v-icon>Téléphone:452547789</p>
-              <p><v-icon color="green">mdi-email-check-outline</v-icon>E-mail : bonjour@sitevraimentsuper.fr </p>
-             <p><v-icon color="green">mdi-monitor</v-icon>https://github.com/</p>
-             <p><v-icon color="green">mdi-linkedin</v-icon>https://www.linkedin.com/</p>
+            <h5 class="text-h3  font-italic" style="color:#5E35B1">Weslati Farah</h5>
+            <p class="font-italic text-h5" style="color:#9575CD"><v-icon color="#2E7D32">mdi-face-agent</v-icon>Dévéloper</p>
+               <p><v-icon color="#2E7D32">mdi-cellphone</v-icon>Téléphone:452547789</p>
+              <p><v-icon color="#2E7D32">mdi-email-check-outline</v-icon>E-mail : bonjour@sitevraimentsuper.fr </p>
         </v-col>
     </v-row>
     <v-row>
         <v-col cols="12" md="12">
-        <p>Dear recruiter,<br>
+        <p  class="text-left">DEAR RECRUITER,<br>
 
 Perseverance, excellent communication skills, and a goal-driven work ethic are all required for sales success.
 As your next Sales Representative, I am ready to make a big impact as a competent sales professional with a proven track record of effectively creating new business and driving revenue growth.<br>
@@ -48,7 +43,6 @@ Best wishes in your employment hunt. </p>
         <v-col cols="12" md="4">
                <p class="font-weight-bold" style="color:#7E57C2">Best regards,</p>
                <p class="font-italic" style="color:red">Farah</p>
-               <p class="font-weight-bold" style="color:#1B5E20">Jamie Chastain</p>
         </v-col>
     </v-row>
    </v-container>

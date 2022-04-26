@@ -24,6 +24,8 @@ import StatistCompany from "../views/StatistCompany"
 import CvForm from "../views/Profil/CvForm"
 import LettreForm from "../views/Profil/LettreForm"
 import ModifierPost from "../views/ModifierPost"
+import DetailsPost from "../views/DetailsPost"
+import PostuleLettre from "../views/PostuleLettre"
 
 const routes = [
 
@@ -158,6 +160,18 @@ const routes = [
     path: '/ModifierPost',
     name: 'ModifierPost',
     component:ModifierPost
+    
+  },
+  {
+    path: '/DetailsPost',
+    name: 'DetailsPost',
+    component:DetailsPost
+    
+  },
+  {
+    path: '/PostuleLettre',
+    name: 'PostuleLettre',
+    component:PostuleLettre
     
   },
 
