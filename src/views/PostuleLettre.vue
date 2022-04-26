@@ -38,10 +38,19 @@
             <v-row>
               <v-col cols="12" md="12">
                   <p class="text-h6"><v-img  src=" https://www.hloom.com/images/cle-banner.svg " style="width:80px; height:80px" ></v-img>Télécharger votre lettre</p>
-                   <p>Téléchargez votre lettre de motivation au format de votre choix et soyez fin prêt pour postuler.</p>
+                   <p>Téléchargez votre lettre de motivation au format de votre choix.</p>
                   </v-col>  
             </v-row>
             <v-card-text>
+                <v-col cols="12" md="12">
+                      <v-text-field
+                       label="Enter the title"
+                       variant="outlined"
+                        clearable
+                       clear-icon="mdi-cancel"
+                         prepend-inner-icon="mdi-emoticon-excited-outline"
+                       ></v-text-field>
+                </v-col>
                 <v-row>
                     <v-col cols="12" md="12">
                           <v-file-input
@@ -119,17 +128,14 @@
           <v-toolbar-title>Close</v-toolbar-title>
           <v-spacer></v-spacer>
         </v-toolbar>
-        <v-list
-          lines="15"
-          subheader
-        >
+   <v-container fluid align="center">
                <v-row>
               <v-col cols="12" md="12">
                   <p class="text-h6"><v-img  src="https://www.hloom.com/images/banner-cover-letter-format.png" style="width:80px; height:80px" ></v-img>Créer votre lettre</p>
                    <p>Ajouter votre lettre de motivation vous permet de postuler très rapidement</p>
                   </v-col> 
                   <v-row>
-                     <v-col cols="12" md="4">
+                     <v-col cols="12" md="6">
                              <v-text-field
                        label="Enter your name"
                        variant="outlined"
@@ -138,7 +144,7 @@
                          prepend-inner-icon="mdi-emoticon-excited-outline"
                        ></v-text-field>
                         </v-col>
-                     <v-col cols="12" md="4">
+                     <v-col cols="12" md="6">
                             <v-text-field
                        label="Enter your profession"
                        variant="outlined"
@@ -150,7 +156,7 @@
                     </v-row>
               </v-row>
               <v-row>
-                        <v-col cols="12" md="4">
+                        <v-col cols="12" md="6">
                                <v-text-field
                        label="Enter your phone Number"
                        variant="outlined"
@@ -159,7 +165,7 @@
                           prepend-inner-icon="mdi-cellphone-android"
                          ></v-text-field>
                         </v-col>
-                        <v-col cols="12" md="4">
+                        <v-col cols="12" md="6">
                                <v-text-field
                        label="Enter your Email"
                        variant="outlined"
@@ -193,7 +199,7 @@
                 color="green"
               >Enregistrer</v-btn></v-col>
                     </v-row>
-        </v-list>
+        </v-container>
       </v-card>
     </v-dialog>
   </v-row>
