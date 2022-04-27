@@ -233,24 +233,59 @@
          </v-row>
         <v-row>
           <v-col cols="12" md="12">
-              <v-radio-group v-model="radios">
-        <p>Demandez-vous aux candidats de soumettre un CV?</p>
-      <v-radio value="oui">
-        <template v-slot:label>
-          <div>Of course it's <strong class="success--text">oui</strong></div>
-        </template>
-      </v-radio>
-      <v-radio value="Nom">
-        <template v-slot:label>
-          <div>Definitely <strong class="primary--text">Nom</strong></div>
-        </template>
-      </v-radio>
-       <v-radio value="Optionnel">
-        <template v-slot:label>
-          <div>it's<strong class="primary--text">Optionnel</strong></div>
-        </template>
-      </v-radio>
-    </v-radio-group>
+        <p> Allez-nous a la partie questionnaires?</p>
+          <v-col
+          cols="12"
+          sm="12"
+        >
+         <v-icon>mdi-account-edit</v-icon>
+          <v-text-field
+            color="success"
+            label="Entrer la première question:"
+            placeholder="Placeholder"
+            variant="outlined"
+    
+          ></v-text-field>
+        </v-col>
+               <v-col
+          cols="12"
+          sm="12"
+        >
+      <v-icon>mdi-account-question-outline</v-icon>
+           <v-textarea
+        auto-grow
+        filled
+        color="blue"
+        label="Repondez-vous"
+        rows="1"
+      ></v-textarea>
+        </v-col>
+          <v-col
+          cols="12"
+          sm="12"
+        >
+         <v-icon>mdi-account-edit</v-icon>
+          <v-text-field
+            color="success"
+            label="Entrer la Deuxième question:"
+            placeholder="Placeholder"
+            variant="outlined"
+    
+          ></v-text-field>
+        </v-col>
+               <v-col
+          cols="12"
+          sm="12"
+        >
+      <v-icon>mdi-account-question-outline</v-icon>
+           <v-textarea
+        auto-grow
+        filled
+        color="blue"
+        label="Repondez-vous"
+        rows="1"
+      ></v-textarea>
+        </v-col>
           </v-col>
         </v-row>
         <v-row>
