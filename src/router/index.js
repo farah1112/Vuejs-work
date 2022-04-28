@@ -26,6 +26,7 @@ import LettreForm from "../views/Profil/LettreForm"
 import ModifierPost from "../views/ModifierPost"
 import DetailsPost from "../views/DetailsPost"
 import PostuleLettre from "../views/PostuleLettre"
+import RechercheEmploi from "../views/RechercheEmploi"
 
 const routes = [
 
@@ -172,6 +173,12 @@ const routes = [
     path: '/PostuleLettre',
     name: 'PostuleLettre',
     component:PostuleLettre
+    
+  },
+  {
+    path: '/RechercheEmploi',
+    name: 'RechercheEmploi',
+    component:RechercheEmploi
     
   },
 
