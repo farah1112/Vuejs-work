@@ -29,6 +29,7 @@ import PostuleLettre from "../views/PostuleLettre"
 import RechercheEmploi from "../views/RechercheEmploi"
 import AproposPage from "../views/AproposPage"
 import OffreSave from "../views/OffreSave"
+import UserOffreSave from "../views/UserOffreSave"
 
 const routes = [
 
@@ -193,6 +194,12 @@ const routes = [
     path: '/OffreSave',
     name: 'OffreSave',
     component:OffreSave
+    
+  },
+  {
+    path: '/UserOffreSave',
+    name: 'UserOffreSave',
+    component:UserOffreSave
     
   },
 

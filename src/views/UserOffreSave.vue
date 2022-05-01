@@ -1,55 +1,12 @@
 <template>
 <navbar-view/>
 <v-divider></v-divider>
-  <div>
-    <v-row>
-         <v-col
-        cols="12"
-        md="4"
-      >
-<v-col>
-    <p class="font-weight-bold">
-      Vos offres d'emploi
-    </p>
-        </v-col>
-    <v-layout>
-      <v-navigation-drawer
-        floating
-        permanent
-      >
-        <v-list
-          density="compact"
-          nav
-        >
-          <v-btn  flat rounded prepend-icon=" mdi-publish" title="  Publiez vos offres" value="  Publiez vos offres" to="PosteCompany" >Publiez vos offres</v-btn>
-          <br><br>
-          <v-btn   flat rounded prepend-icon="mdi-content-paste" title=" gérer vos offres" value=" gérer vos offres" to="GerePoste">gérer vos offres</v-btn>
-          <br><br>
-          <v-btn  flat rounded prepend-icon="mdi-forum" title="Statistiques" value="Statistiques" to="StatistCompany">Statistiques</v-btn>
-          <br><br>
-          <v-btn flat rounded prepend-icon="mdi-card-text-outline" title="Candidatures" value=" Candidatures" to="CandidatureCompany">Candidatures</v-btn>
-            <br><br>
-                  <v-col>
-           <p class="font-weight-bold">
-              Accès à la CVthèque
-                </p>
-                 </v-col>
-            <v-btn  flat rounded prepend-icon="mdi-magnify" title=" Rechercher des CV's" value="Rechercher des CV's" to="RechercheCv">Rechercher des CV's</v-btn>
-            <br><br>
-          <v-btn  flat rounded prepend-icon=" mdi-briefcase-download-outline" title="CV's sauvgardés" value="CV's sauvgardés" to="SaveCv">CV's sauvgardés</v-btn>
-          <br><br>
-           <v-btn  flat rounded prepend-icon="mdi-bookmark-multiple-outline" title="Offres sauvgardés" value="Offres sauvgardés" to="OffreSave">Offres sauvgardés</v-btn>
-        </v-list>
-      </v-navigation-drawer>
-      <v-main style="height: 750px"></v-main>
-    </v-layout>
-         </v-col>
-    <v-col cols="12" md="8">
+<v-container>
 <v-icon size="40" color="green">mdi-bookmark-multiple-outline</v-icon>
-<h5 class="font-weight-medium">Enregistrement des Offres Préférées</h5> 
-<v-divider></v-divider>
+<h5 class="font-weight-medium">Enregistrement des Offres Préférées Par Utilisateur</h5> 
+<v-divider></v-divider> 
+<br>
 <v-row>
-  <v-col cols="12" md="12">
         <v-banner
     lines="Three"
     color="deep-purple-accent-4"
@@ -60,8 +17,11 @@
         <router-link to="DetailsPost" style="text-decoration:none"><h5 class="font-italic">Développeur web Full Stack / Développeur web React</h5></router-link> 
         </v-col>
         </v-row>
+        <v-row>
+            <v-col cols="12" md="2"></v-col>
          <v-icon color="yellow" size="30">mdi-flag-variant-outline</v-icon>
       <h6 class="font-weight-bold"> Tunis</h6>
+      </v-row>
       <p>On recrute un Développeur web Full Stack / Développeur web React.js - Français ...</p>
  </v-banner-text>
  <v-row>
@@ -87,7 +47,6 @@
         </v-col>
  </v-row>
   </v-banner>
-  </v-col>
 </v-row>
 <br><br>
       <div class="text-center">
@@ -125,9 +84,7 @@
       </template>
     </v-snackbar>
   </div>
-         </v-col>
-         </v-row>
-  </div>   
+</v-container> 
     <v-divider></v-divider>
     <footer-view/>
 </template>
