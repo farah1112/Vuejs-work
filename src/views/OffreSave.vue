@@ -38,58 +38,42 @@
             <br><br>
           <v-btn  flat rounded prepend-icon=" mdi-briefcase-download-outline" title="CV's sauvgardés" value="CV's sauvgardés" to="SaveCv">CV's sauvgardés</v-btn>
           <br><br>
-           <v-btn  flat rounded prepend-icon=" mdi-bookmark-multiple-outline" title="Offres sauvgardés" value="Offres sauvgardés" to="OffreSave">Offres sauvgardés</v-btn>
+           <v-btn  flat rounded prepend-icon="mdi-bookmark-multiple-outline" title="Offres sauvgardés" value="Offres sauvgardés" to="OffreSave">Offres sauvgardés</v-btn>
         </v-list>
       </v-navigation-drawer>
       <v-main style="height: 750px"></v-main>
     </v-layout>
          </v-col>
-      <v-col cols="12" md="8">
-             <br>
-             <v-row>
-                 <v-col cols="12" md="12">
-             <h5 class="font-weight-bold">Candidatures</h5>
-             </v-col>
-             </v-row>
-             <v-row>
-                 <v-col cols="12" md="12">
-                     <v-tabs
-                  v-model="tab"
-                   >
-      <v-tab value="one">Toutes[0]</v-tab>
-      <v-tab value="two">Nouvelles[0]</v-tab>
-      <v-tab value="three">Préselectionnéess[0]</v-tab>
-       <v-tab value="four">Réfusées[1]</v-tab>
-    </v-tabs>
+    <v-col cols="12" md="8">
+<v-icon size="40" color="green">mdi-bookmark-multiple-outline</v-icon>
+<h5 class="font-weight-medium">Enregistrement des Offres Préférées</h5> 
+<v-divider></v-divider>
 
-    <v-card-text>
-      <v-window v-model="tab">
-        <v-window-item value="one">
-          One
-        </v-window-item>
 
-        <v-window-item value="two">
-          Two
-        </v-window-item>
-
-        <v-window-item value="three">
-          Three
-        </v-window-item>
-        
-        <v-window-item value="four">
-            Four
-        </v-window-item>
-      </v-window>
-    </v-card-text>
-                 </v-col>
-             </v-row>
-             <v-row>
-               <v-col cols="12" md="6"></v-col>
-                <v-col cols="12" md="6">
-                 <v-btn  prepend-icon="mdi-file-download-outline" rounded flat color="blue" to="PosteCompany">Publier une nouvelle Poste</v-btn>
-             </v-col>
-             </v-row>
-              
+<v-row>
+  <v-col cols="12" md="12">
+        <v-banner
+    lines="Three"
+    color="deep-purple-accent-4"
+  >
+    <v-banner-text>
+        <router-link to="DetailsPost" style="text-decoration:none"><h5 class="font-italic">Développeur web Full Stack / Développeur web React</h5></router-link> 
+         <v-icon color="yellow" size="30">mdi-flag-variant-outline</v-icon>
+      <h6 class="font-weight-bold"> Tunis</h6>
+      <p>On recrute un Développeur web Full Stack / Développeur web React.js - Français ...</p>
+ </v-banner-text>
+  </v-banner>
+  </v-col>
+</v-row>
+         <v-row>
+           <v-col  cols="12" md="4"></v-col>
+             <v-col
+          cols="12"
+          md="8"
+        >
+       <v-btn flat rounded color="#B2FF59" style="padding-left:100px;padding-right:100px">Supprimer de La liste </v-btn>
+        </v-col>
+         </v-row>
          </v-col>
          </v-row>
   </div>   
@@ -101,6 +85,20 @@ import NavbarView from '@/components/NavbarView.vue'
 import FooterView from '@/components/FooterView.vue'
 export default {
   components: { NavbarView, FooterView },
+    data: () => ({
+      messages: [
+        {
+          avatar: 'https://cdn.icon-icons.com/icons2/1378/PNG/512/avatardefault_92824.png',
+          name: 'Farah weslati',
+          title: 'Vue js developer',
+        },
+      ],
+      parag: 'je suis un developer vue js j ai 5 ans d expéerience .J ai un diplome en informatique.Je souhaite me spécialiser dans le domaine de Développement Web .Je suis assidue ,ambitieuse et Prête a mettre mes compétences et ma passion en pratique ',
+      parag1:'Contact: Télephone:52214491 ',     
+      parag2:'Email:farahweslati@gmail.com ',             
+      parag3:'linkedin :https://www.linkedin.com/in/farah-weslati-52a5571bb/' 
+     
+    }),
 }
 </script>
 <style>

@@ -27,6 +27,8 @@ import ModifierPost from "../views/ModifierPost"
 import DetailsPost from "../views/DetailsPost"
 import PostuleLettre from "../views/PostuleLettre"
 import RechercheEmploi from "../views/RechercheEmploi"
+import AproposPage from "../views/AproposPage"
+import OffreSave from "../views/OffreSave"
 
 const routes = [
 
@@ -179,6 +181,18 @@ const routes = [
     path: '/RechercheEmploi',
     name: 'RechercheEmploi',
     component:RechercheEmploi
+    
+  },
+  {
+    path: '/AproposPage',
+    name: 'AproposPage',
+    component:AproposPage
+    
+  },
+  {
+    path: '/OffreSave',
+    name: 'OffreSave',
+    component:OffreSave
     
   },
 
