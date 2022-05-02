@@ -77,7 +77,7 @@
           <v-spacer></v-spacer>
         </v-toolbar>
        <v-container fluid align="center">
-         <v-icon size="50">
+         <v-icon size="40">
              mdi-account-arrow-right-outline
          </v-icon>
          <h5 align="center">
@@ -133,39 +133,6 @@
       </v-window-item>
 
       <v-window-item :value="2">
-        <v-card-text>
-          <v-row>
-               <v-col
-          cols="12"
-          sm="12"
-        >
-         <v-icon>mdi-account-edit</v-icon>
-          <v-text-field
-            color="success"
-            label="Entrer la deuxième question:"
-            placeholder="Placeholder"
-            variant="outlined"
-    
-          ></v-text-field>
-        </v-col>
-               <v-col
-          cols="12"
-          sm="12"
-        >
-      <v-icon>mdi-account-question-outline</v-icon>
-           <v-textarea
-        auto-grow
-        filled
-        color="deep-purple"
-        label="Repondez-vous"
-        rows="1"
-      ></v-textarea>
-        </v-col>
-        </v-row>  
-        </v-card-text>
-      </v-window-item>
-
-      <v-window-item :value="3">
         <v-container>
           <v-row>
             <v-col
@@ -231,7 +198,7 @@
       </v-btn>
       <v-spacer></v-spacer>
       <v-btn
-        v-if="step < 3"
+        v-if="step < 2"
         color="black"
         depressed
         @click="step++"
@@ -239,7 +206,7 @@
         Next
       </v-btn>
        <v-btn
-        v-if="step >2"
+        v-if="step >1"
         color="black"
         depressed
         style="background-color:green"
@@ -354,7 +321,6 @@ export default {
       currentTitle () {
         switch (this.step) {
           case 1: return 'Les Questions'
-          case 2: return 'Les Questions'
           default: return 'Postuler Maintenant'
         }
       },

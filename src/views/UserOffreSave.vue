@@ -85,6 +85,11 @@
     </v-snackbar>
   </div>
 </v-container> 
+<v-container align="center">
+<img src="https://us.123rf.com/450wm/gmast3r/gmast3r1705/gmast3r170501109/79018658-dessin-anim%C3%A9-visage-triste-personnes-n%C3%A9gatives-emotion-ic%C3%B4ne-vector-illustration.jpg?ver=6" style="width:200px;height:200px">
+<h5 class="text-h4 font-italic" style="color:blue">Encore aucune offre dans votre liste</h5>
+<p >Pour sauvegarder une offre, appuyez sur le bouton <br>"Sauvegarder cette offre" disponible dans la page <br>de description de l'offre.</p>
+</v-container>
     <v-divider></v-divider>
     <footer-view/>
 </template>
