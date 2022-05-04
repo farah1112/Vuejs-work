@@ -30,7 +30,7 @@ import RechercheEmploi from "../views/RechercheEmploi"
 import AproposPage from "../views/AproposPage"
 import OffreSave from "../views/OffreSave"
 import UserOffreSave from "../views/UserOffreSave"
-
+import InfoTest from "../views/InfoTest"
 const routes = [
 
   {
@@ -200,6 +200,12 @@ const routes = [
     path: '/UserOffreSave',
     name: 'UserOffreSave',
     component:UserOffreSave
+    
+  },
+  {
+    path: '/InfoTest',
+    name: 'InfoTest',
+    component:InfoTest
     
   },
 
