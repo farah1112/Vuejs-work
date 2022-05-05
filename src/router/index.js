@@ -31,6 +31,8 @@ import AproposPage from "../views/AproposPage"
 import OffreSave from "../views/OffreSave"
 import UserOffreSave from "../views/UserOffreSave"
 import InfoTest from "../views/InfoTest"
+import ModifierLaPoste from "../views/ModifierLaPoste"
+
 const routes = [
 
   {
@@ -206,6 +208,12 @@ const routes = [
     path: '/InfoTest',
     name: 'InfoTest',
     component:InfoTest
+    
+  },
+  {
+    path: '/ModifierLaPoste',
+    name: 'ModifierLaPoste',
+    component:ModifierLaPoste
     
   },
 

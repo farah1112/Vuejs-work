@@ -1,48 +1,8 @@
 <template>
 <navbar-view/>
-  <div>
-    <v-row>
-      <v-col cols="12" md="4">
-<v-col>
-    <p class="font-weight-bold">
-      Vos offres d'emploi
-    </p>
-        </v-col>
-    <v-layout>
-      <v-navigation-drawer
-        floating
-        permanent
-      >
-        <v-list
-          density="compact"
-          nav
-        >
-          <v-btn  flat rounded prepend-icon=" mdi-publish" title="  Publiez vos offres" value="  Publiez vos offres" to="PosteCompany" >Publiez vos offres</v-btn>
-          <br><br>
-          <v-btn   flat rounded prepend-icon="mdi-content-paste" title=" gérer vos offres" value=" gérer vos offres" to="GerePoste">gérer vos offres</v-btn>
-          <br><br>
-          <v-btn  flat rounded prepend-icon="mdi-forum" title="Statistiques" value="Statistiques" to="StatistCompany">Statistiques</v-btn>
-          <br><br>
-          <v-btn flat rounded prepend-icon="mdi-card-text-outline" title="Candidatures" value=" Candidatures" to="CandidatureCompany">Candidatures</v-btn>
-            <br><br>
-                  <v-col>
-           <p class="font-weight-bold">
-              Accès à la CVthèque
-                </p>
-                 </v-col>
-            <v-btn  flat rounded prepend-icon="mdi-magnify" title=" Rechercher des CV's" value="Rechercher des CV's" to="RechercheCv">Rechercher des CV's</v-btn>
-            <br><br>
-          <v-btn  flat rounded prepend-icon=" mdi-briefcase-download-outline" title="CV's sauvgardés" value="CV's sauvgardés" to="SaveCv">CV's sauvgardés</v-btn>
-          <br><br>
-           <v-btn  flat rounded prepend-icon="mdi-bookmark-multiple-outline" title="Offres sauvgardés" value="Offres sauvgardés" to="OffreSave">Offres sauvgardés</v-btn>
-          <br><br>  
-        </v-list>
-      </v-navigation-drawer>
-      <v-main style="height: 750px"></v-main>
-    </v-layout>
-    </v-col>
-    <v-col cols="12" md="8">
-      <h5 class="font-weight-bold">Publier vos Postes</h5>
+    <v-container align="center">
+          <v-col cols="12" md="8">
+      <h5 class="font-weight-bold">Modifier vos Postes</h5>
         <v-col
           cols="12"
           md="12"
@@ -291,21 +251,30 @@
           </v-col>
         </v-row>
         <v-row>
-          <v-col cols="12" md="4">
+          <v-col cols="12" md="2">
           </v-col>
           <v-col cols="12" md="8">
                <v-btn
                 prepend-icon=" mdi-truck-check"
       variant="outlined"
       color="green"
+       class="ma-2"
     >
-    Valider le contenu!
+    Valider la modification!
+    </v-btn>
+               <v-btn
+                prepend-icon=" mdi-triangle"
+      variant="outlined"
+      color="#DD2C00"
+       class="ma-2"
+    >
+   Annuler La modification!
     </v-btn>
           </v-col>
         </v-row>
     </v-col>
-    </v-row>
-  </div>   
+    
+    </v-container>
     <v-divider></v-divider>
     <footer-view/>
 </template>
@@ -314,7 +283,7 @@ import NavbarView from '@/components/NavbarView.vue'
 import FooterView from '@/components/FooterView.vue'
 export default {
   components: { NavbarView, FooterView },
- 
+    
 }
 </script>
 <style>
