@@ -53,8 +53,156 @@
         </div>
   </v-container>
   <v-container align="center">
+      <v-row justify="center">
+        <v-dialog
+      v-model="dialog1"
+      fullscreen
+      :scrim="false"
+      transition="dialog-bottom-transition"
+    >
+      <template v-slot:activator="{ props }">
+   <v-btn flat rounded  v-bind="props"><v-icon>mdi-marker</v-icon></v-btn>
+    </template>
+      <v-card>
+        <v-toolbar
+          dark
+          color="primary"
+        >
+          <v-btn
+            icon
+            dark
+            @click="dialog1 = false"
+          >
+            <v-icon>mdi-close</v-icon>
+          </v-btn>
+          <v-toolbar-title>Close</v-toolbar-title>
+          <v-spacer></v-spacer>
+        </v-toolbar>
+             <v-container fluid align="center">
+         <h5 class="font-italic" style="color:cornflowerblue"><v-icon>mdi-account-group-outline</v-icon> Les Données personnelles</h5>
+         <br>
+ <v-row>
+        <v-col
+          cols="12"
+          sm="6"
+        >
+          <v-text-field
+            label="Nom de la société"
+            prepend-inner-icon="mdi-bullhorn"
+            placeholder="Placeholder"
+            variant="outlined"
+          ></v-text-field>
+        </v-col>
+        
+        <v-col
+          cols="12"
+          sm="6"
+        >
+           <v-text-field
+            label="ex:https://www.company.com"
+            prepend-inner-icon="mdi-web"
+            placeholder="Placeholder"
+            variant="outlined"
+          ></v-text-field>
+        </v-col>
+        </v-row>
+        <v-row>
+          <v-col
+          cols="12"
+          sm="6"
+        >
+          <v-text-field
+            label="Le nombre des Employees "
+            placeholder="Placeholder"
+            variant="outlined"
+             prepend-inner-icon="mdi-account"
+          ></v-text-field>
+          </v-col>
+             <v-col
+          cols="12"
+          sm="6"
+        >
+         <v-text-field
+            label="ex:1680 "
+            placeholder="Placeholder"
+            variant="outlined"
+             prepend-inner-icon="mdi-account"
+          ></v-text-field>
+        </v-col>
+        </v-row>
+                <v-row>
+          <v-col
+          cols="12"
+          sm="6"
+        >
+          <v-text-field
+            label="Le Headquarts "
+            placeholder="Placeholder"
+            variant="outlined"
+             prepend-inner-icon="mdi-garage"
+          ></v-text-field>
+          </v-col>
+             <v-col
+          cols="12"
+          sm="6"
+        >
+         <v-text-field
+            label="Location "
+            placeholder="Placeholder"
+            variant="outlined"
+             prepend-inner-icon="mdi-map-marker"
+          ></v-text-field>
+        </v-col>
+        </v-row>
+        <v-row>
+          <v-col cols="12" md="2">
+          <v-text-field
+            color="success"
+            label="LinkedIn"
+          prepend-inner-icon="mdi-linkedin"
+            placeholder="Placeholder"
+            variant="outlined"
+          ></v-text-field>
+          </v-col>
+              <v-col cols="12" md="2">
+          <v-text-field
+            color="success"
+            label="Facebook"
+           prepend-inner-icon="mdi-facebook"
+            placeholder="Placeholder"
+            variant="outlined"
+          ></v-text-field>
+        </v-col>
+              <v-col cols="12" md="2">
+          <v-text-field
+            color="success"
+            label="Twitter"
+          prepend-inner-icon="mdi-twitter"
+            placeholder="Placeholder"
+            variant="outlined"
+          ></v-text-field>
+        </v-col>
+          <v-col cols="12" md="6">
+                 <v-textarea
+        v-model="bio"
+        auto-grow
+        filled
+        color="deep-purple"
+        label="Description de la Société"
+        rows="1"
+      ></v-textarea>
+          </v-col>
+        </v-row>
+          <v-row>
+              <v-btn variant="outlined" color="blue" class="m-2" rounded flat  prepend-icon="mdi-floppy" style="padding-left:50px;padding-right:50px">Save </v-btn>
+                <v-btn variant="outlined" color="red" class="m-2" rounded flat  prepend-icon="mdi-close-outline"  style="padding-left:50px;padding-right:50px">Annuler </v-btn>
+              </v-row>
+      </v-container>
+      </v-card>
+    </v-dialog>
+    </v-row>
       <v-col>
-         <h5>Informations professionnelles  </h5>
+         <h5>Informations professionnelles</h5>
              </v-col>
              <v-col>
                  <v-row justify="space-around">
@@ -323,6 +471,10 @@ export default {
   components: { NavbarView, FooterView },
     data () {
       return {
+         dialog1: false,
+        notifications: false,
+        sound: true,
+        widgets: false,
         dialog: false,
          show1: false,
           message4: 'Hey!',
@@ -345,5 +497,8 @@ export default {
 </script>
 
 <style>
-
+.dialog-bottom-transition-enter-active,
+.dialog-bottom-transition-leave-active {
+  transition: transform .2s ease-in-out;
+}
 </style>

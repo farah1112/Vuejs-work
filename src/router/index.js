@@ -32,7 +32,7 @@ import OffreSave from "../views/OffreSave"
 import UserOffreSave from "../views/UserOffreSave"
 import InfoTest from "../views/InfoTest"
 import ModifierLaPoste from "../views/ModifierLaPoste"
-
+import CompanyPage from "../views/CompanyPage"
 const routes = [
 
   {
@@ -214,6 +214,12 @@ const routes = [
     path: '/ModifierLaPoste',
     name: 'ModifierLaPoste',
     component:ModifierLaPoste
+    
+  },
+  {
+    path: '/CompanyPage',
+    name: 'CompanyPage',
+    component:CompanyPage
     
   },
 
