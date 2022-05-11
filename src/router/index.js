@@ -33,6 +33,9 @@ import UserOffreSave from "../views/UserOffreSave"
 import InfoTest from "../views/InfoTest"
 import ModifierLaPoste from "../views/ModifierLaPoste"
 import CompanyPage from "../views/CompanyPage"
+import DarkMode from "../views/DarkMode"
+import AdminDashboard from "../views/AdminDashboard"
+import DetailsPostAdmin from "../views/DetailsPostAdmin"
 const routes = [
 
   {
@@ -222,6 +225,25 @@ const routes = [
     component:CompanyPage
     
   },
+  {
+    path: '/DarkMode',
+    name: 'DarkMode',
+    component:DarkMode
+    
+  },
+  {
+    path: '/AdminDashboard',
+    name: 'AdminDashboard',
+    component:AdminDashboard
+    
+  },
+  {
+    path: '/DetailsPostAdmin',
+    name: 'DetailsPostAdmin',
+    component:DetailsPostAdmin
+    
+  },
+
 
 ];
 
