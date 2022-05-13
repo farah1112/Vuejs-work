@@ -16,7 +16,7 @@
         v-for="(item, i) in items"
         :key="i"
         :value="item"
-        router :to="item.route"
+         router :to="item.route"
         active-color="#00E676"
         rounded="shaped"
       >
@@ -34,7 +34,7 @@
     theme="dark"
   >
     <v-tab>
-     All Users:
+     All Companies:
     </v-tab>
   </v-tabs>
   <v-expansion-panels variant="popout" class="pa-4">
@@ -60,7 +60,7 @@
               <v-img
                 v-if="message.avatar"
                 alt="Avatar"
-                src="https://scontent.ftun8-1.fna.fbcdn.net/v/t39.30808-6/245462097_1542057339472925_6344033447496594175_n.jpg?_nc_cat=101&ccb=1-6&_nc_sid=09cbfe&_nc_ohc=68oGQCzLwqAAX-_4_Xo&tn=1HPkFl2ekD9QHK_o&_nc_ht=scontent.ftun8-1.fna&oh=00_AT_Ig03aaEX9D3jcNWtnK3scjT_A1iyC_qqlhI0Qoz-9sg&oe=6282E778"
+                src="https://amzsoftware.com/wp-content/uploads/2021/10/AMZ-Software-Logo.jpg"
               ></v-img>
               <v-icon
                 v-else
@@ -112,7 +112,7 @@
 
       <v-expansion-panel-text>
     <v-card-text class="text-body-1 font-italic" v-text="paragA"></v-card-text>
-          <v-card-text class="text-body-1 font-italic" v-text="paragB"></v-card-text>
+      <v-card-text class="text-body-1 font-italic" v-text="paragB"></v-card-text>
            <v-card-text class="text-body-1 font-italic" v-text="paragC"></v-card-text>
             <v-card-text class="text-body-1 font-italic" v-text="paragD"></v-card-text>
          <v-card-text  class="font-weight-bold" v-text="parag1"></v-card-text>
@@ -120,27 +120,24 @@
            <v-card-text   class="font-weight-bold" v-text="parag3"></v-card-text>
             <v-card-text   class="font-weight-bold" v-text="parag4"></v-card-text>
             <v-card-text   class="font-weight-bold" v-text="parag5"></v-card-text>
+                <v-card-text   class="font-weight-bold" v-text="parag6"></v-card-text>
+            <v-card-text   class="font-weight-bold" v-text="parag7"></v-card-text>
+                <v-card-text   class="font-weight-bold" v-text="parag8"></v-card-text>
+            <v-card-text   class="font-weight-bold" v-text="parag9"></v-card-text>
+                <v-card-text   class="font-weight-bold" v-text="parag10"></v-card-text>
+            <v-card-text   class="font-weight-bold" v-text="parag11"></v-card-text>
+                <v-card-text   class="font-weight-bold" v-text="parag12"></v-card-text>
+            <v-card-text   class="font-weight-bold" v-text="parag13"></v-card-text>
              <v-spacer></v-spacer>
-             <router-link to="ModifierUser"  style="text-decoration:none">
-       <v-btn
-       class="ma-2"
-      rounded="pill"
-      color="#F1F8E9"
-      prepend-icon="mdi-update"
+                <v-container>
+        <p style="color:red">Vous acceptez cet offre comme administrateur?</p>
+<p><img src="https://i.gifer.com/origin/41/41340ab1a4529c7dd753f03268087e08.gif" style="width:60px;height:60px">  <v-btn
+    transparent flat rounded 
+      @click="snackbar = true"
     >
-      Modifier user
+     Accepter Cette Offre
     </v-btn>
-    </router-link>
 
-      <v-btn
-       @click="snackbar = true"
-      class="ma-2"
-      rounded="pill"
-      color="#F1F8E9"
-      prepend-icon="mdi-delete-empty"
-    >
-     Supprimer User
-    </v-btn>
     <v-snackbar
       v-model="snackbar"
       multi-line
@@ -149,21 +146,78 @@
 
       <template v-slot:actions>
         <v-btn
-          color="#FF6F00"
+          color="red"
           variant="text"
           @click="snackbar = false"
         >
-          Supprimer
+         Accepter
         </v-btn>
           <v-btn
-          color="#FF6F00"
+          color="red"
           variant="text"
           @click="snackbar = false"
+        >
+          Annuler
+        </v-btn>
+      </template>
+    </v-snackbar></p>
+
+<p ><img src="https://c.tenor.com/hmbt9N7tR0gAAAAj/incorrect-nah.gif" style="width:60px;height:60px"> <v-btn
+    transparent flat rounded 
+      @click="snackbar1 = true"
+    >
+    Réfuser Cette Offre
+    </v-btn>
+
+    <v-snackbar
+      v-model="snackbar1"
+      multi-line
+    >
+      {{ text1 }}
+
+      <template v-slot:actions>
+        <v-btn
+          color="red"
+          variant="text"
+          @click="snackbar1 = false"
+        >
+          Accepter
+        </v-btn>
+            <v-btn
+          color="red"
+          variant="text"
+          @click="snackbar1 = false"
         >
          Annuler
         </v-btn>
       </template>
-    </v-snackbar>
+    </v-snackbar></p>
+</v-container>
+             <router-link to="ModifierOffreAdmin"  style="text-decoration:none">
+       <v-btn
+       class="ma-2"
+      rounded="pill"
+      color="#F1F8E9"
+      prepend-icon="mdi-update"
+    >
+      <v-tooltip
+        activator="parent"
+        anchor="start"
+      >Modifier Offre</v-tooltip>
+    </v-btn>
+    </router-link>
+
+      <v-btn
+      class="ma-2"
+      rounded="pill"
+      color="#F1F8E9"
+      prepend-icon="mdi-delete-empty"
+    >
+      <v-tooltip
+        activator="parent"
+        anchor="start"
+      >Supprimer Offre </v-tooltip>
+    </v-btn>
       </v-expansion-panel-text>
     </v-expansion-panel>
   </v-expansion-panels>
@@ -180,29 +234,39 @@ export default {
   components: { NavbarView, FooterView },
      data: () => ({
        snackbar: false,
-      text: ` Would you like to remove this user?`,
+        snackbar1: false,
+      text: ` Would you like to remove this Company?`,
+        text1: ` Would you like to remove this Company?`,
       selectedItem: 1,
       items: [
-        { text: 'Gestion users', icon: 'mdi-account-check-outline' , route: '/GestionUsers'},
+      { text: 'Gestion users', icon: 'mdi-account-check-outline' , route: '/GestionUsers'},
         { text: 'Gestion Entreprises', icon: 'mdi-contacts' , route: '/GestionEntreprise' },
         { text: 'Gestions Offres', icon: 'mdi-wallet-membership' ,route: '/GestionOffreAdmin'},
       ],
           messages: [
         {
-          avatar: 'https://cdn.icon-icons.com/icons2/1378/PNG/512/avatardefault_92824.png',
-          name: 'Farah weslati',
-          title: 'Vue js developer',
+          avatar: 'https://amzsoftware.com/wp-content/uploads/2021/10/AMZ-Software-Logo.jpg',
+          name: 'Developpeur java ',
+          title: 'Voir plus de detaills',
         },
       ],
-      paragA:'Nom :Weslati', 
-      paragB:'Prénom:Farah', 
-      paragC:'Civilité:Tunisienne', 
-      paragD:'Ville: Tunis ', 
-      parag1:'Contact: Télephone:52214491 ',     
-      parag2:'Email:farahweslati@gmail.com ',             
-      parag3:'linkedin :https://www.linkedin.com/in/farah-weslati-52a5571bb/' ,
-      parag4:'Twitter :https://twitter.com/?lang=fr' ,
-      parag5:'Facebbok:https://www.facebook.com/' ,
+      paragA: 'Poste:Developpeur java ',
+      paragB:'Lieu de travail:Tunis ',
+      paragC:'pays:Tunis ',
+      paragD:'Type de contrat: Temps-plein', 
+      parag1:'Temps de travail: jour ',     
+      parag2:'Salaire: 2500dt',             
+      parag3:'Monnaie: DINNAR' ,
+      parag4:'Choisisez la periode: 21-50jours' ,
+      parag5:'Description:Le lorem ipsum est, en imprimerie, une suite de mots sans signification utilisée à titre provisoire pour calibrer une mise en page, le texte définitif venant remplacer le faux-texte dès quil est prêt ou que la mise en page est achevéeGénéralementon utilise un texte en faux latinle Lorem ipsum ou Lipsum.' ,
+      parag6:'Nom Société: AMZ software ',     
+      parag7:'Site Web:',             
+      parag8:'Nombre d emploi:' ,
+      parag9:'Année foundation:' ,
+      parag10:'Déscription:' ,
+     parag11:'Question1:' ,
+     parag12:'Question2:' ,
+     parag13:'Question3:' ,
     }),  
 }
 </script>

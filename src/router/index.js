@@ -6,8 +6,6 @@ import CandidateView from "../views/CandidateView"
 import CompanyView from "../views/CompanyView"
 import SignIn from "../views/SignIn"
 import SideBar from"../components/SideBar"
-import DashbordView from '@/views/Admin/DashbordView.vue'
-import GestionUser from '@/views/Admin/GestionUser'
 import PostuleCv from "../views/PostuleCv"
 import HomeView from "../views/HomeView"
 import TelechargerView from "../views/TelechargerView"
@@ -36,6 +34,13 @@ import CompanyPage from "../views/CompanyPage"
 import DarkMode from "../views/DarkMode"
 import AdminDashboard from "../views/AdminDashboard"
 import DetailsPostAdmin from "../views/DetailsPostAdmin"
+import ModifierUser from "../views/ModifierUser"
+import GestionEntreprise from "../views/GestionEntreprise"
+import ModifierEntreprise from "../views/ModifierEntreprise"
+import GestionOffreAdmin from "../views/GestionOffreAdmin"
+import ModifierOffreAdmin from "../views/ModifierOffreAdmin"
+import GestionUsers from "../views/GestionUsers"
+
 const routes = [
 
   {
@@ -62,18 +67,6 @@ const routes = [
     path:'/SideBar',
     name:'SideBar',
     component: SideBar
-  },
-  {
-    path: '/DashbordView',
-    name: 'DashbordView',
-    component:DashbordView
-    
-  },
-  {
-    path: '/GestionUser',
-    name: 'GestionUser',
-    component:GestionUser
-    
   },
   {
     path: '/PostuleCv',
@@ -243,7 +236,42 @@ const routes = [
     component:DetailsPostAdmin
     
   },
-
+  {
+    path: '/ModifierUser',
+    name: 'ModifierUser',
+    component:ModifierUser
+    
+  },
+  {
+    path: '/GestionEntreprise',
+    name: 'GestionEntreprise',
+    component:GestionEntreprise
+    
+  },
+  {
+    path: '/ModifierEntreprise',
+    name: 'ModifierEntreprise',
+    component:ModifierEntreprise
+    
+  },
+  {
+    path: '/GestionOffreAdmin',
+    name: 'GestionOffreAdmin',
+    component:GestionOffreAdmin
+    
+  },
+  {
+    path: '/ModifierOffreAdmin',
+    name: 'ModifierOffreAdmin',
+    component:ModifierOffreAdmin
+    
+  },
+  {
+    path: '/GestionUsers',
+    name: 'GestionUsers',
+    component:GestionUsers
+    
+  },
 
 ];
 
