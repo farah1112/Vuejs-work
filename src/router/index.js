@@ -40,7 +40,9 @@ import ModifierEntreprise from "../views/ModifierEntreprise"
 import GestionOffreAdmin from "../views/GestionOffreAdmin"
 import ModifierOffreAdmin from "../views/ModifierOffreAdmin"
 import GestionUsers from "../views/GestionUsers"
-
+import AddAdmin from "../views/AddAdmin"
+import ModifierAdmin from "../views/ModifierAdmin"
+import GestionAdmins from "../views/GestionAdmins"
 const routes = [
 
   {
@@ -270,6 +272,24 @@ const routes = [
     path: '/GestionUsers',
     name: 'GestionUsers',
     component:GestionUsers
+    
+  },
+  {
+    path: '/AddAdmin',
+    name: 'AddAdmin',
+    component:AddAdmin
+    
+  },
+  {
+    path: '/ModifierAdmin',
+    name: 'ModifierAdmin',
+    component:ModifierAdmin
+    
+  },
+    {
+    path: '/GestionAdmins',
+    name: 'GestionAdmins',
+    component:GestionAdmins
     
   },
 

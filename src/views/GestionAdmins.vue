@@ -5,7 +5,7 @@
   <v-col cols="12" md="6"></v-col>
    <v-col cols="12" md="4">
        <v-text-field
-            label="Search with an Offre"
+            label="Search with a name"
             prepend-inner-icon="mdi-magnify-minus-outline"
             variant="outlined"
           ></v-text-field>
@@ -43,12 +43,12 @@
     max-width="300"
   >
     <v-list shaped>
-   <router-link to="AdminDashboard" style="text-decoration:none"> <v-list-subheader color="green">ADMIN DASHBOARD</v-list-subheader></router-link>
+                <router-link to="AdminDashboard" style="text-decoration:none"> <v-list-subheader color="green">ADMIN DASHBOARD</v-list-subheader></router-link> 
       <v-list-item
         v-for="(item, i) in items"
         :key="i"
         :value="item"
-         router :to="item.route"
+        router :to="item.route"
         active-color="#00E676"
         rounded="shaped"
       >
@@ -66,7 +66,7 @@
     theme="dark"
   >
     <v-tab>
-     All Companies:
+     All Admins:
     </v-tab>
   </v-tabs>
   <v-expansion-panels variant="popout" class="pa-4">
@@ -92,7 +92,7 @@
               <v-img
                 v-if="message.avatar"
                 alt="Avatar"
-                src="https://amzsoftware.com/wp-content/uploads/2021/10/AMZ-Software-Logo.jpg"
+                src="https://scontent.ftun8-1.fna.fbcdn.net/v/t39.30808-6/245462097_1542057339472925_6344033447496594175_n.jpg?_nc_cat=101&ccb=1-6&_nc_sid=09cbfe&_nc_ohc=68oGQCzLwqAAX-_4_Xo&tn=1HPkFl2ekD9QHK_o&_nc_ht=scontent.ftun8-1.fna&oh=00_AT_Ig03aaEX9D3jcNWtnK3scjT_A1iyC_qqlhI0Qoz-9sg&oe=6282E778"
               ></v-img>
               <v-icon
                 v-else
@@ -144,7 +144,7 @@
 
       <v-expansion-panel-text>
     <v-card-text class="text-body-1 font-italic" v-text="paragA"></v-card-text>
-      <v-card-text class="text-body-1 font-italic" v-text="paragB"></v-card-text>
+          <v-card-text class="text-body-1 font-italic" v-text="paragB"></v-card-text>
            <v-card-text class="text-body-1 font-italic" v-text="paragC"></v-card-text>
             <v-card-text class="text-body-1 font-italic" v-text="paragD"></v-card-text>
          <v-card-text  class="font-weight-bold" v-text="parag1"></v-card-text>
@@ -152,24 +152,27 @@
            <v-card-text   class="font-weight-bold" v-text="parag3"></v-card-text>
             <v-card-text   class="font-weight-bold" v-text="parag4"></v-card-text>
             <v-card-text   class="font-weight-bold" v-text="parag5"></v-card-text>
-                <v-card-text   class="font-weight-bold" v-text="parag6"></v-card-text>
-            <v-card-text   class="font-weight-bold" v-text="parag7"></v-card-text>
-                <v-card-text   class="font-weight-bold" v-text="parag8"></v-card-text>
-            <v-card-text   class="font-weight-bold" v-text="parag9"></v-card-text>
-                <v-card-text   class="font-weight-bold" v-text="parag10"></v-card-text>
-            <v-card-text   class="font-weight-bold" v-text="parag11"></v-card-text>
-                <v-card-text   class="font-weight-bold" v-text="parag12"></v-card-text>
-            <v-card-text   class="font-weight-bold" v-text="parag13"></v-card-text>
              <v-spacer></v-spacer>
-                <v-container>
-        <p style="color:red">Vous acceptez cet offre comme administrateur?</p>
-<p><img src="https://i.gifer.com/origin/41/41340ab1a4529c7dd753f03268087e08.gif" style="width:60px;height:60px">  <v-btn
-    transparent flat rounded 
-      @click="snackbar = true"
+             <router-link to="ModifierAdmin"  style="text-decoration:none">
+       <v-btn
+       class="ma-2"
+      rounded="pill"
+      color="#F1F8E9"
+      prepend-icon="mdi-update"
     >
-     Accepter Cette Offre
+      Modifier Admin
     </v-btn>
+    </router-link>
 
+      <v-btn
+       @click="snackbar = true"
+      class="ma-2"
+      rounded="pill"
+      color="#F1F8E9"
+      prepend-icon="mdi-delete-empty"
+    >
+     Supprimer Admin
+    </v-btn>
     <v-snackbar
       v-model="snackbar"
       multi-line
@@ -178,78 +181,21 @@
 
       <template v-slot:actions>
         <v-btn
-          color="red"
+          color="#FF6F00"
           variant="text"
           @click="snackbar = false"
         >
-         Accepter
+          Supprimer
         </v-btn>
           <v-btn
-          color="red"
+          color="#FF6F00"
           variant="text"
           @click="snackbar = false"
-        >
-          Annuler
-        </v-btn>
-      </template>
-    </v-snackbar></p>
-
-<p ><img src="https://c.tenor.com/hmbt9N7tR0gAAAAj/incorrect-nah.gif" style="width:60px;height:60px"> <v-btn
-    transparent flat rounded 
-      @click="snackbar1 = true"
-    >
-    Réfuser Cette Offre
-    </v-btn>
-
-    <v-snackbar
-      v-model="snackbar1"
-      multi-line
-    >
-      {{ text1 }}
-
-      <template v-slot:actions>
-        <v-btn
-          color="red"
-          variant="text"
-          @click="snackbar1 = false"
-        >
-          Accepter
-        </v-btn>
-            <v-btn
-          color="red"
-          variant="text"
-          @click="snackbar1 = false"
         >
          Annuler
         </v-btn>
       </template>
-    </v-snackbar></p>
-</v-container>
-             <router-link to="ModifierOffreAdmin"  style="text-decoration:none">
-       <v-btn
-       class="ma-2"
-      rounded="pill"
-      color="#F1F8E9"
-      prepend-icon="mdi-update"
-    >
-      <v-tooltip
-        activator="parent"
-        anchor="start"
-      >Modifier Offre</v-tooltip>
-    </v-btn>
-    </router-link>
-
-      <v-btn
-      class="ma-2"
-      rounded="pill"
-      color="#F1F8E9"
-      prepend-icon="mdi-delete-empty"
-    >
-      <v-tooltip
-        activator="parent"
-        anchor="start"
-      >Supprimer Offre </v-tooltip>
-    </v-btn>
+    </v-snackbar>
       </v-expansion-panel-text>
     </v-expansion-panel>
   </v-expansion-panels>
@@ -266,12 +212,10 @@ export default {
   components: { NavbarView, FooterView },
      data: () => ({
        snackbar: false,
-        snackbar1: false,
-      text: ` Would you like to remove this Company?`,
-        text1: ` Would you like to remove this Company?`,
+      text: ` Would you like to remove this Admin?`,
       selectedItem: 1,
       items: [
-  { text: 'Gestion Admins', icon: 'mdi-account-check-outline' , route: '/GestionAdmins'},
+        { text: 'Gestion Admins', icon: 'mdi-account-check-outline' , route: '/GestionAdmins'},
         { text: 'Gestion users', icon: 'mdi-account-check-outline' , route: '/GestionUsers'},
         { text: 'Gestion Entreprises', icon: 'mdi-contacts' , route: '/GestionEntreprise' },
         { text: 'Gestions Offres', icon: 'mdi-wallet-membership' ,route: '/GestionOffreAdmin'},
@@ -279,28 +223,20 @@ export default {
       ],
           messages: [
         {
-          avatar: 'https://amzsoftware.com/wp-content/uploads/2021/10/AMZ-Software-Logo.jpg',
-          name: 'Developpeur java ',
-          title: 'Voir plus de detaills',
+          avatar: 'https://cdn.icon-icons.com/icons2/1378/PNG/512/avatardefault_92824.png',
+          name: 'Farah weslati',
+          title: 'An Admin Of the Website',
         },
       ],
-      paragA: 'Poste:Developpeur java ',
-      paragB:'Lieu de travail:Tunis ',
-      paragC:'pays:Tunis ',
-      paragD:'Type de contrat: Temps-plein', 
-      parag1:'Temps de travail: jour ',     
-      parag2:'Salaire: 2500dt',             
-      parag3:'Monnaie: DINNAR' ,
-      parag4:'Choisisez la periode: 21-50jours' ,
-      parag5:'Description:Le lorem ipsum est, en imprimerie, une suite de mots sans signification utilisée à titre provisoire pour calibrer une mise en page, le texte définitif venant remplacer le faux-texte dès quil est prêt ou que la mise en page est achevéeGénéralementon utilise un texte en faux latinle Lorem ipsum ou Lipsum.' ,
-      parag6:'Nom Société: AMZ software ',     
-      parag7:'Site Web:',             
-      parag8:'Nombre d emploi:' ,
-      parag9:'Année foundation:' ,
-      parag10:'Déscription:' ,
-     parag11:'Question1:' ,
-     parag12:'Question2:' ,
-     parag13:'Question3:' ,
+      paragA:'Nom :Weslati', 
+      paragB:'Prénom:Farah', 
+      paragC:'Civilité:Tunisienne', 
+      paragD:'Ville: Tunis ', 
+      parag1:'Contact: Télephone:52214491 ',     
+      parag2:'Email:farahweslati@gmail.com ',             
+      parag3:'linkedin :https://www.linkedin.com/in/farah-weslati-52a5571bb/' ,
+      parag4:'Twitter :https://twitter.com/?lang=fr' ,
+      parag5:'Facebbok:https://www.facebook.com/' ,
     }),  
 }
 </script>
