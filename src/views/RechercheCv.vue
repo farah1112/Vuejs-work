@@ -43,8 +43,7 @@
       </v-navigation-drawer>
       <v-main style="height: 750px"></v-main>
     </v-layout>
-
-         </v-col>
+</v-col>
          <v-col cols="12" md="8">
            <v-row>
               <v-col cols="12" md="12">
@@ -148,6 +147,15 @@
          <v-card-text  class="font-weight-bold" v-text="parag1"></v-card-text>
           <v-card-text   class="font-weight-bold"  v-text="parag2"></v-card-text>
            <v-card-text   class="font-weight-bold" v-text="parag3"></v-card-text>
+            <v-col>
+               <v-hover
+        v-slot="{ isHovering, props }"
+        open-delay="200"
+      >
+           <v-btn    :elevation="isHovering ? 16 : 2"
+          :class="{ 'on-hover': isHovering }" v-bind="props"       variant="outlined" rounded  prepend-icon="mdi-content-save">Save Cv</v-btn>
+           </v-hover>
+          </v-col>
       </v-expansion-panel-text>
     </v-expansion-panel>
   </v-expansion-panels>

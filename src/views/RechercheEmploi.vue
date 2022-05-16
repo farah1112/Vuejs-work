@@ -162,7 +162,7 @@ Vous êtes aussi à l’aise dans le Frontend que le Backend?<br> Vous aimez tra
       color="primary"
       variant="outlined"
     >
-      postuler facilement
+      postuler Maitenant
       <v-icon end icon="mdi-face"></v-icon>
     </v-chip>
 </v-col>
