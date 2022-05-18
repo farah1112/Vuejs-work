@@ -839,7 +839,7 @@
       <v-icon size="50">mdi-fountain-pen<h5>Langues </h5></v-icon>
            <p>
          Langues
-                   <v-col
+         <v-col
           cols="12"
           sm="12"
         >

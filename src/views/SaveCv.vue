@@ -140,9 +140,32 @@
            <v-col  cols="12" md="4"></v-col>
              <v-col
           cols="12"
-          md="8"
+          md="6"
         >
-       <v-btn flat rounded color="#B2FF59" style="padding-left:100px;padding-right:100px">Supprimer</v-btn>
+       <v-btn flat rounded color="#B2FF59" style="padding-left:100px;padding-right:100px"    @click="snackbar = true"><v-icon>mdi-delete-circle-outline</v-icon> tous les CV</v-btn>
+           <v-snackbar
+      v-model="snackbar"
+      multi-line
+    >
+      {{ text }}
+
+      <template v-slot:actions>
+        <v-btn
+          color="red"
+          variant="text"
+          @click="snackbar = false"
+        >
+          Supprimer
+        </v-btn>
+          <v-btn
+          color="red"
+          variant="text"
+          @click="snackbar = false"
+        >
+          Annuler
+        </v-btn>
+      </template>
+    </v-snackbar>
         </v-col>
          </v-row>
          </v-col>
@@ -157,6 +180,8 @@ import FooterView from '@/components/FooterView.vue'
 export default {
   components: { NavbarView, FooterView },
     data: () => ({
+       snackbar: false,
+      text: `would you like to delete all CV's?`,
       messages: [
         {
           avatar: 'https://cdn.icon-icons.com/icons2/1378/PNG/512/avatardefault_92824.png',
