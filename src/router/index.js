@@ -45,6 +45,7 @@ import ModifierAdmin from "../views/ModifierAdmin"
 import GestionAdmins from "../views/GestionAdmins"
 import PostuleOffreUser from "../views/PostuleOffreUser"
 import ProfilUser from "../views/ProfilUser"
+import GestionStatistiqueAdmin from "../views/GestionStatistiqueAdmin"
 const routes = [
 
   {
@@ -304,6 +305,12 @@ const routes = [
     path: '/ProfilUser',
     name: 'ProfilUser',
     component:ProfilUser
+    
+  },
+  {
+    path: '/GestionStatistiqueAdmin',
+    name: 'GestionStatistiqueAdmin',
+    component:GestionStatistiqueAdmin
     
   },
 

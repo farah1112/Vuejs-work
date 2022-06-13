@@ -1,39 +1,12 @@
 <template>
 <navbar-view/>
 <br>
+<v-container>
 <v-row>
-  <v-col cols="12" md="6"></v-col>
-   <v-col cols="12" md="4">
-       <v-text-field
-            label="Search "
-            prepend-inner-icon="mdi-magnify-minus-outline"
-            variant="outlined"
-          ></v-text-field>
-   </v-col>
-     <v-col cols="12" md="2">
-       <router-link to="AddAdmin" style="text-decoration:none">
-        <v-tooltip
-          v-model="show"
-          top
-        >
-          <template v-slot:activator="{ props }">
-            <v-btn
-            flat 
-              icon
-              v-bind="props"
-            >
-              <v-icon color="#FF9800">
-               mdi-account-multiple-plus-outline
-              </v-icon>
-            </v-btn>
-          </template>
-          <span>Add Admin</span>
-        </v-tooltip>
-        </router-link>
-        </v-col>
+  <v-col cols="12" md="12" align="center">
+<img src="https://www.facebook.com/messenger_photo/?fbid=1651470988561857&message_id=mid.%24cAAAAAQzyTYuHcIYQh2BP0CN9e-Nt" style="height:200px">
+  </v-col>
 </v-row>
-<v-container align="center">
-<h5 class="text-h5  font-italic" style=" color:blueviolet"><img src="https://i.pinimg.com/originals/58/54/cc/5854ccbf23126f8d56c0347624f9f312.gif" style="width:100px ;height:100px"> Welcome to The AdminPanel</h5>
 </v-container>
 <v-row>
   <v-col cols="12" md="4">
@@ -242,5 +215,4 @@ export default {
 </script>
 
 <style>
-
 </style>

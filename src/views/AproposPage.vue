@@ -1,7 +1,7 @@
 <template>
 <navbar-view/>
 <div class="Nutrition">
-       <v-row >
+       <v-row>
       <v-col  cols="12" xs="12" sm="6" md="12" lg="12" class="text-align:center">
             <h2 style="color:black">Welcome to CatchIT</h2>
       </v-col>
