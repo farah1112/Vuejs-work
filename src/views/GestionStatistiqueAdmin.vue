@@ -68,55 +68,281 @@
     <v-tab class="text-h5 font-italic" color="#64DD17">
      All statestiques:
     </v-tab>
-  </v-tabs> 
-    <v-row
-      class="fill-height"
-      align="center"
-      justify="center"
-    >
-      <template v-for="(item, i) in items1" :key="i">
-        <v-col
-          cols="12"
-          md="4"
-        >
-          <v-hover v-slot="{ isHovering, props }">
-            <v-card
-              :elevation="isHovering ? 12 : 2"
-              :class="{ 'on-hover': isHovering }"
-              v-bind="props"
-            >
-              <v-img
-                :src="item.img"
-                height="220px"
-                cover
-              >
-                <v-card-title class="text-h6 text-white d-flex flex-column" align="center">
-                  <p class="mt-4 font-weight-bold ">
-                    {{ item.title }}
-                  </p>
-                  <br><br>
-                  <div>
-                    <p class="ma-0 text-body-1 font-weight-bold">
-                      {{ item.text }}
-                    </p>
-                  </div>
-                </v-card-title>
-                <div class="align-self-center">
-                  <v-btn
-                    v-for="(index) in icons"
-                    :key="index"
-                    variant="text"
-                    :class="{ 'show-btns': isHovering }"
-                    :color="transparent"
-                  ></v-btn>
-                </div>
-              </v-img>
-            </v-card>
-          </v-hover>
-        </v-col>
-      </template>
-    </v-row>
+  </v-tabs>
+  <v-row>
+    <v-col cols="12" md="12">
+    <v-card
+    style="background-color:#A5D6A7"
+  >
+    <v-card-text>
+        <p class="text-h4 text--primary font-italic">
+        <v-icon>mdi-account-check-outline</v-icon> le nombre d'administrateurs:
+      </p>
+      <div class="text--primary">
+        ici on affiche le nombre d'administrateurs dans notre site <br> clique sur voir plus pour avoir le resultat"
+      </div>
+    </v-card-text>
+    <v-card-actions>
+      <v-btn
+        variant="text"
+        color="black"
+        @click="reveal = true"
+      >
+       VOIR PLUS
+      </v-btn>
+    </v-card-actions>
+
+    <v-expand-transition>
+      <v-card
+        v-if="reveal"
+        class="transition-fast-in-fast-out v-card--reveal"
+        style="height: 100%; background-color:#A5D6A7"
+      >
+        <v-card-text class="pb-0">
+          <p class="text-h4 text--primary">
+            <v-icon color="#F1F8E9">mdi-sticker-emoji</v-icon><br>200 administrateurs
+          </p>
+        </v-card-text>
+        <v-card-actions class="pt-0">
+          <v-btn
+            variant="text"
+            color="black"
+            @click="reveal = false"
+          >
+            Close
+          </v-btn>
+        </v-card-actions>
+      </v-card>
+    </v-expand-transition>
+  </v-card>
+  <br>
+   <v-card
+    style="background-color:#84FFFF"
+  >
+    <v-card-text>
+        <p class="text-h4 text--primary font-italic">
+        <v-icon>mdi-face-profile</v-icon> le nombre d'utilisateurs:
+      </p>
+      <div class="text--primary">
+        ici on affiche le nombre d'utilisateurs trouvés dans notre site <br> clique sur voir plus pour avoir le resultat"
+      </div>
+    </v-card-text>
+    <v-card-actions>
+      <v-btn
+        variant="text"
+        color="black"
+        @click="reveal1 = true"
+      >
+       VOIR PLUS
+      </v-btn>
+    </v-card-actions>
+
+    <v-expand-transition>
+      <v-card
+        v-if="reveal1"
+        class="transition-fast-in-fast-out v-card--reveal"
+        style="height: 100%; background-color:#84FFFF"
+      >
+        <v-card-text class="pb-0">
+          <p class="text-h4 text--primary">
+            <v-icon color="#0097A7">mdi-face-profile</v-icon><br>200 utilisateurs
+          </p>
+        </v-card-text>
+        <v-card-actions class="pt-0">
+          <v-btn
+            variant="text"
+            color="black"
+            @click="reveal1 = false"
+          >
+            Close
+          </v-btn>
+        </v-card-actions>
+      </v-card>
+    </v-expand-transition>
+  </v-card>
+  <br>
+  <v-card
+    style="background-color:#A1887F"
+  >
+    <v-card-text>
+        <p class="text-h4 text--primary font-italic">
+        <v-icon>mdi-office-building</v-icon> le nombre d'entreprises:
+      </p>
+      <div class="text--primary">
+        ici on affiche le nombre d'entreprises trouvés dans notre site <br> clique sur voir plus pour avoir le resultat"
+      </div>
+    </v-card-text>
+    <v-card-actions>
+      <v-btn
+        variant="text"
+        color="black"
+        @click="reveal2 = true"
+      >
+       VOIR PLUS
+      </v-btn>
+    </v-card-actions>
+
+    <v-expand-transition>
+      <v-card
+        v-if="reveal2"
+        class="transition-fast-in-fast-out v-card--reveal"
+        style="height: 100%; background-color:#A1887F"
+      >
+        <v-card-text class="pb-0">
+          <p class="text-h4 text--primary">
+            <v-icon color="#EFEBE9">mdi-office-building</v-icon><br>200 entreprises
+          </p>
+        </v-card-text>
+        <v-card-actions class="pt-0">
+          <v-btn
+            variant="text"
+            color="black"
+            @click="reveal2 = false"
+          >
+            Close
+          </v-btn>
+        </v-card-actions>
+      </v-card>
+    </v-expand-transition>
+  </v-card>
+  <br>
+  <v-card
+    style="background-color:#039BE5"
+  >
+    <v-card-text>
+        <p class="text-h4 text--primary font-italic">
+        <v-icon>mdi-vector-arrange-below</v-icon> le nombre d'offers:
+      </p>
+      <div class="text--primary">
+        ici on affiche le nombre d'offres postées dans notre site <br> clique sur voir plus pour avoir le resultat"
+      </div>
+    </v-card-text>
+    <v-card-actions>
+      <v-btn
+        variant="text"
+        color="black"
+        @click="reveal3 = true"
+      >
+       VOIR PLUS
+      </v-btn>
+    </v-card-actions>
+
+    <v-expand-transition>
+      <v-card
+        v-if="reveal3"
+        class="transition-fast-in-fast-out v-card--reveal"
+        style="height: 100%; background-color:#039BE5"
+      >
+        <v-card-text class="pb-0">
+          <p class="text-h4 text--primary">
+            <v-icon color="#EFEBE9">mdi-vector-arrange-below</v-icon><br>200 entreprises
+          </p>
+        </v-card-text>
+        <v-card-actions class="pt-0">
+          <v-btn
+            variant="text"
+            color="black"
+            @click="reveal3 = false"
+          >
+            Close
+          </v-btn>
+        </v-card-actions>
+      </v-card>
+    </v-expand-transition>
+  </v-card>
+  <br>
+   <v-card
+    style="background-color:#E6EE9C"
+  >
+    <v-card-text>
+        <p class="text-h4 text--primary font-italic">
+        <v-icon>mdi-checkbook</v-icon> le nombre de CV:
+      </p>
+      <div class="text--primary">
+        ici on affiche le nombre de CV crés dans notre site <br> clique sur voir plus pour avoir le resultat"
+      </div>
+    </v-card-text>
+    <v-card-actions>
+      <v-btn
+        variant="text"
+        color="black"
+        @click="reveal4 = true"
+      >
+       VOIR PLUS
+      </v-btn>
+    </v-card-actions>
+
+    <v-expand-transition>
+      <v-card
+        v-if="reveal4"
+        class="transition-fast-in-fast-out v-card--reveal"
+        style="height: 100%; background-color:#E6EE9C"
+      >
+        <v-card-text class="pb-0">
+          <p class="text-h4 text--primary">
+            <v-icon color="white">mdi-checkbook</v-icon><br>200 CV crés
+          </p>
+        </v-card-text>
+        <v-card-actions class="pt-0">
+          <v-btn
+            variant="text"
+            color="black"
+            @click="reveal4 = false"
+          >
+            Close
+          </v-btn>
+        </v-card-actions>
+      </v-card>
+    </v-expand-transition>
+  </v-card>
+  <br>
+   <v-card
+    style="background-color:#FFB74D"
+  >
+    <v-card-text>
+        <p class="text-h4 text--primary font-italic">
+        <v-icon>mdi-checkbook</v-icon> le nombre de lettre de motivation:
+      </p>
+      <div class="text--primary">
+        ici on affiche le nombre de lettre de motivation crées dans notre site <br> clique sur voir plus pour avoir le resultat"
+      </div>
+    </v-card-text>
+    <v-card-actions>
+      <v-btn
+        variant="text"
+        color="black"
+        @click="reveal5 = true"
+      >
+       VOIR PLUS
+      </v-btn>
+    </v-card-actions>
+
+    <v-expand-transition>
+      <v-card
+        v-if="reveal5"
+        class="transition-fast-in-fast-out v-card--reveal"
+        style="height: 100%; background-color:#FFB74D"
+      >
+        <v-card-text class="pb-0">
+          <p class="text-h4 text--primary">
+            <v-icon color="white">mdi-checkbook</v-icon><br>200 lettres crées
+          </p>
+        </v-card-text>
+        <v-card-actions class="pt-0">
+          <v-btn
+            variant="text"
+            color="black"
+            @click="reveal5 = false"
+          >
+            Close
+          </v-btn>
+        </v-card-actions>
+      </v-card>
+    </v-expand-transition>
+  </v-card>
   </v-col>
+  </v-row> 
+    </v-col>
 </v-row>
   <footer-view/>
 </template>
@@ -127,6 +353,12 @@ import FooterView from '@/components/FooterView.vue'
 export default {
   components: { NavbarView, FooterView },
      data: () => ({
+       reveal: false,
+       reveal1: false,
+         reveal2: false,
+          reveal3: false,
+           reveal4: false,
+            reveal5: false,
        snackbar: false,
       text: ` Would you like to remove this user?`,
       selectedItem: 1,
@@ -144,41 +376,15 @@ export default {
           title: 'Vue js developer',
         },
       ],
-         items1: [
-        {
-          title: 'Administrateurs du site ',
-          text: `20 Administrateurs`,
-          img: 'https://info.everteam.com/hs-fs/hubfs/An%20illustration%20of%20virtual%20data.jpeg?width=1000&height=563&name=An%20illustration%20of%20virtual%20data.jpeg',
-        },
-        {
-          title: 'Utilisateurs',
-          text: '300 utilisateurs',
-          img: 'https://dailygeekshow.com/wp-content/uploads/2018/08/une-dark-web.jpg',
-        },
-        {
-          title: 'Entreprises',
-          text: '10000 entreprises',
-          img: 'https://freedesignfile.com/upload/2014/01/business-backgrounds-3.jpg',
-        },
-        {
-          title: 'Offres',
-          text: '50000 offres',
-          img: 'http://www.villeneuvelesmaguelone.fr/wp-content/uploads/2016/06/alejandro_escamillo_unsplash.jpg',
-        },
-      ],
-      transparent: 'rgba(255, 255, 255, 0)',
          }),  
 }
 </script>
 
-<style scoped>
-  .v-card {
-    transition: opacity .4s ease-in-out;
-  }
-  .v-card:not(.on-hover) {
-    opacity: 0.6;
-  }
-  .show-btns {
-    color: rgba(255, 255, 255, 1) !important;
-  }
+<style>
+.v-card--reveal {
+  bottom: 0;
+  opacity: 1 !important;
+  position: absolute;
+  width: 100%;
+}
 </style>
